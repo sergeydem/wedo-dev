@@ -1,36 +1,17 @@
 <!doctype html>
 <html lang="ru">
 <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109981378-1"></script>
-	<script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-109981378-1');
-	</script>
-	<!-- Google Tag Manager -->
-	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WPHJ273');</script>
-	<!-- End Google Tag Manager -->
-	<title>Разработка интернет-магазина, продвижение (seo,ppc,smm) | WeDo</title>
+	<title>Title</title>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="yandex-verification" content="80567c69a37b1299" />
-	<meta name='freelancehunt' content='f1392e2ffcdd730' />
-	<meta name="description" content="Создание интернет-магазина с нуля. Интеграция с 1С и учётными системами. SEO, контекстная реклама, продвижение в социальных сетях. Бесплатная консультация.">
+	<meta name="description" content="">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    {% if en %}
-		{% set path='../' %}
-	{% else %}
+
 		{% set path='' %}
-	{% endif %}
+
 	<link rel="stylesheet" href="{{path}}css/main.css">
 	<script src="{{path}}js/jquery.selectric.js"></script>
 	<script src="{{path}}js/bootstrap-formhelpers.min.js"></script>
@@ -38,242 +19,30 @@
 
 </head>
 	<body>
-	<!-- Yandex.Metrika counter -->
-	<script type="text/javascript" >
-        (function (d, w, c) {
-            (w[c] = w[c] || []).push(function() {
-                try {
-                    w.yaCounter46972284 = new Ya.Metrika({
-                        id:46972284,
-                        clickmap:true,
-                        trackLinks:true,
-                        accurateTrackBounce:true,
-                        webvisor:true
-                    });
-                } catch(e) { }
-            });
-
-            var n = d.getElementsByTagName("script")[0],
-                s = d.createElement("script"),
-                f = function () { n.parentNode.insertBefore(s, n); };
-            s.type = "text/javascript";
-            s.async = true;
-            s.src = "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/watch.js";
-
-            if (w.opera == "[object Opera]") {
-                d.addEventListener("DOMContentLoaded", f, false);
-            } else { f(); }
-        })(document, window, "yandex_metrika_callbacks");
-	</script>
-	<noscript><div><img src="https://mc.yandex.ru/watch/46972284" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-	<!-- /Yandex.Metrika counter -->
-
-	<noscript>
-		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WPHJ273" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-	</noscript>
-
 	<header>
 		<div class="container">
-			<div class="parallax">
-				<div class="image-parallax man"></div>
-			</div>
 			<div class="row top-line align-items-center">
-					<div class="col-5 col-md-3 col-lg-4 col-xl-4 item">
-						<div class="logo">
-							<a href=""><img src="{{path}}img/logoWedo.png" alt="WeDo"></a>
-						</div>
-					</div>
-					<div class="col-7 col-md-6 col-lg-4 col-xl-4 item">
-						<div class="phone">
-							<div class="collapse-lang hidden-sm-up">
-								<div class="ru" onclick="changePath('/')"><p>RU</p></div>
-								<div class="en" onclick="changePath('/en')"><p>EN</p></div>
-							</div>
-							<p class="hidden-sm-down">+38(097)564-68-71</p>
-							<p> +38(050)687-75-11</p>
-							<p class="hidden-md-up">{{address}}</p>
-						</div>
-					</div>
-					<div class="col-9 col-md-3 col-lg-4 col-xl-4 item">
-						<div class="addres">
-							<p class="hidden-sm-down">{{address}}</p>
-							<div class="collapse-lang hidden-sm-down">
-								<div class="ru" onclick="changePath('/')"><p>RU</p></div>
-								<div class="en" onclick="changePath('/en')"><p>EN</p></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			<div class="row align-items-center justify-content-end" id="menu">
-					<div class="col-12 col-md-9 col-xl-6">
-						<ul>
-							<li><a href="#development">{{menu_item1}}</a></li>
-							<li><a href="#integration">{{menu_item2}}</a></li>
-							<li><a href="#advancement">{{menu_item3}}</a></li>
-						</ul>
-					</div>
-				</div>
+
+			</div>
+
 			<div class="row wrap-btn align-items-center justify-content-center">
 				<div class="col-12 col-xl-4">
 					<div class="button">
 						<a href="#" data-toggle="modal" data-target="#myModal" class="btn-pink" data-wipe="{{btn1}}">{{btn1}}</a>
-						<!--<a href="#" class="btn-pink b24-web-form-popup-btn-12 b24-web-form-popup-btn-6" data-wipe="{{btn1}}">{{btn1}}</a>-->
 					</div>
 				</div>
 			</div>
 		</div>
 	</header>
-	<section id="wedo">
-		<div class="container">
-			<div class="row wrap-title justify-content-end">
-				<div class="col-12 col-md-12 col-xl-11">
-					<h1>{{title_wedo}}</h1>
-					<h1>{{descr_wedo}}</h1>
-				</div>
-			</div>
-			<div class="row items">
-				<div class="col-12 col-md-4 col-xl-4 align-self-center item"><p>{{wedo_item1}}</p></div>
-				<div class="col-12 col-md-4 col-xl-4 align-self-center item"><p>{{wedo_item2}}</p></div>
-				<div class="col-12 col-md-4 col-xl-4 align-self-center item"><p>{{wedo_item3}}</p></div>
-			</div>
-			<div class="row wrap-btn align-items-center justify-content-center">
-				<div class="col-12 col-xl-4">
-					<div class="button">
-						<a href="#" data-toggle="modal" data-target="#myModal" class="btn-pink" data-wipe="{{btn1}}">{{btn1}}</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section id="development">
-		<div class="container">
-			<div class="row wrap-title justify-content-end">
-				<div class="col-12 col-md-12 col-xl-11">
-					<h2>{{title_development}}</h2>
-					<h2>{{descr_development}}</h2>
-				</div>
-			</div>
 
-			<div class="row content">
-				<div class="col-12 col-md-12 col-lg-6 col-xl-6">
-					<section class="timeline">
-						<ul>
-							<li><div>{{timeline_item1}}</div></li>
-							<li><div>{{timeline_item2}}</div></li>
-							<li><div>{{timeline_item3}}</div></li>
-							<li><div>{{timeline_item4}}</div></li>
-							<li><div>{{timeline_item5}}</div></li>
-							<li><div>{{timeline_item6}}</div></li>
-						</ul>
-					</section>
-				</div>
-				<div class="col-12 col-md-12 col-lg-6 col-xl-6">
-					<div class="ribbon-phone">
-						<div class="ribbon-text">
-							<div class="wrap-thesis">
-								<ul class="thesis">
-									<li>{{ribbon_item1}}</li>
-									<li>{{ribbon_item2}}</li>
-									<li>{{ribbon_item3}}</li>
-									<li>{{ribbon_item4}}</li>
-									<li>{{ribbon_item5}}</li>
-								</ul>
-							</div>
-						</div>
-						<div class="wrap-btn">
-							<div class="button">
-								<a href="#" data-toggle="modal" data-target="#myModal" class="btn-pink" data-wipe="{{btn2}}">{{btn2}}</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section id="integration">
-		<div class="container">
-			<div class="row wrap-title justify-content-end">
-				<div class="col-12 col-md-12 col-xl-11">
-					<h2>{{title_integration}}</h2>
-					<h2>{{descr_integration}}</h2>
-					<!--<h2>мы ускорим приём заказов и обеспечим<br class="hidden-sm-down">актуальные цены и наличие на сайте</h2>-->
-				</div>
-			</div>
-			<div class="row items">
-				<div class="col-12 col-md-6 col-xl-6 align-self-center item"><p>{{integr_item1}}</p></div>
-				<div class="col-12 col-md-6 col-xl-6 align-self-center item"><p>{{integr_item2}}</p></div>
-			</div>
-			<div class="row items">
-				<div class="col-12 col-md-6 col-xl-6 align-self-center item"><p>{{integr_item3}}</p></div>
-				<div class="col-12 col-md-6 col-xl-6 align-self-center item"><p>{{integr_item4}}</p></div>
-			</div>
-		</div>
-	</section>
-	<section id="advancement">
-		<div class="container">
-			<div class="row wrap-title justify-content-end">
-				<div class="col-12 col-md-12 col-xl-11">
-					<h2>{{title_advancement}}</h2>
-					<h2>{{descr_advancement}}</h2>
-				</div>
-			</div>
-			<div class="row items justify-content-center no-gutters">
-				<div class="col-12 col-md-6 col-xl-4 align-self-center item">
-					<p>{{advan_seo}}</p>
-					<p>{{advan_item1}}</p>
-				</div>
-				<div class="col-12 col-md-6 col-xl-4 align-self-center item">
-					<p>{{advan_ppc}}</p>
-					<p>{{advan_item2}}</p>
-				</div>
-				<div class="col-12 col-md-6 col-xl-11 align-self-center item hidden-sm-down">
-					<div class="wrap-btn">
-						<div class="button">
-							<a href="#" data-toggle="modal" data-target="#myModal" class="btn-pink" data-wipe="{{btn3}}">{{btn3}}</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-12 col-md-6 col-xl-4 align-self-center item">
-					<p>{{advan_smm}}</p>
-					<p>{{advan_item3}}</p>
-				</div>
-			</div>
-			<div class="row justify-content-end">
-				<div class="col-12 col-xl-11">
-					<div class="wrap-btn">
-						<div class="button">
-							<a href="#" data-toggle="modal" data-target="#myModal" class="btn-pink" data-wipe="{{btn3}}">{{btn3}}</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+
 	<footer>
 		<div class="container">
 			<div class="row items justify-content-center align-items-center no-gutters">
-				<div class="col-12 col-md-4 col-xl-3 item">
-					<div class="phone-footer hidden-sm-down">
-						<p>096-845-81-83</p>
-						<p>050-070-82-57</p>
-						<p>061-221-02-88</p>
-						<p>{{address}}</p>
-					</div>
-				</div>
-				<div class="col-12 col-md-4 col-xl-6 item">
+				<div class="col-12 col-md-12 col-xl-12 item justify-content-center align-items-center">
 					<div class="logo-footer">
 						<a href=""><img src="{{path}}img/logoWedo.png" alt="WeDo"></a>
 						<p>{{сopyright}}</p>
-					</div>
-				</div>
-				<div class="col-12 col-md-4 col-xl-3 item">
-					<div class="menu-footer">
-						<ul>
-							<li><a href="#development">{{menu_item1}}</a></li>
-							<li><a href="#integration">{{menu_item2}}</a></li>
-							<li><a href="#advancement">{{menu_item3}}</a></li>
-							<li><a href="">{{menu_item4}}</a></li>
-						</ul>
 					</div>
 				</div>
 			</div>
@@ -338,16 +107,6 @@
 			</div>
 		</div>
 	</div>
-    <!--<div class="wrap-alert">
-        <div class="alert-div" id="alert">
-            <p>{{alert}}</p>
-            <div class="wrap-btn">
-                <div class="button">
-                    <a href="#" id="open-close" class="btn-pink" data-wipe="{{btn5}}">{{btn5}}</a>
-                </div>
-            </div>
-        </div>
-    </div>-->
 	<!-- END Modal -->
     <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -365,22 +124,8 @@
             </div>
         </div>
     </div>
-	<script>
-        var oldUrl = window.location.pathname;
-        var path = oldUrl.split('/');
-
-        function changePath(local) {
-            if (!!~['en'].indexOf(path[1])) {
-                window.location.href = local=="/en" ? oldUrl: "/";
-            }
-            else {
-                window.location.href = local=="/" ? oldUrl: local + oldUrl;
-            }
-        }
-	</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 	<script src="{{path}}js/main.js"></script>
-	<!--<script src="js/bootstrap-formhelpers.min.js"></script>-->
 	</body>
 </html>
