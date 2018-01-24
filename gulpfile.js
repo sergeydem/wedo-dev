@@ -27,14 +27,14 @@ var path = {
         fonts: 'build/fonts/'
     },
     src: {
-        html: 'src/*.html',
+        html: 'src/*.nun',
         js: 'src/js/*.js',
         style: 'src/style/main.scss',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
     watch: {
-        html: 'src/**/*.html',
+        html: 'src/**/*.nun',
         js: 'src/js/**/*.js',
         style: 'src/style/**/*.scss',
         img: 'src/img/**/*.*',
@@ -68,7 +68,8 @@ gulp.task('pre-clean', function() {
 
 gulp.task('html:generate-ru', function () {
     delete require.cache[require.resolve('./templates/ru.json')];
-    return gulp.src("./src/*.html")
+    return gulp.src("./src/*.nun")
+        .pipe(rigger())
         .pipe(data(function() {
             return require("./templates/ru.json")
         }))
@@ -88,13 +89,6 @@ gulp.task('html:generate-ru', function () {
 //         .pipe(htmlmin({collapseWhitespace: true, minifyCSS: true, minifyJS: true}))
 //         .pipe(gulp.dest("./build/en"));
 // });
-
-gulp.task('html:build', function () {
-    gulp.src(path.src.html) 
-        .pipe(rigger())
-        .pipe(gulp.dest(path.build.html))
-        .pipe(reload({stream: true}));
-});
 
 gulp.task('js:build', function () {
     gulp.src(path.src.js) 
@@ -142,7 +136,6 @@ gulp.task('fonts:build', function() {
 });
 
 gulp.task('build', [
-    'html:build',
     'html:generate-ru',
     // 'html:generate-en',
     'js:build',
@@ -155,7 +148,7 @@ gulp.task('build', [
 gulp.task('watch', function(){
     watch([path.watch.html], function(event, cb) {
         // gulp.start(['html:build','html:generate-ru','html:generate-en']);
-        gulp.start(['html:build','html:generate-ru']);
+        gulp.start('html:generate-ru');
     });
     watch([path.watch.style], function(event, cb) {
         gulp.start('style:build');
