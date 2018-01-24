@@ -2,10 +2,9 @@
 /*BEGIN header*/
 
 header {
-  height: 300px;
-  @include media-breakpoint-up(sm){
-    height: 550px;
-  }
+  height: 100vh;
+  position: relative;
+  width: 100%;
   background-color: $bgHead;
   .top-line {
     padding-top: 20px;
