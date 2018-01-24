@@ -1,0 +1,24 @@
+{
+  "name": "wedo",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "sergeydem <s.demjanenko@artorg.com.ua>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/sergeydem/wedo_landing",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "*",
+    "jquery": "2.*"
+  },
+  "devDependencies": {
+    "bootstrap": "v4.0.0-alpha.6"
+  }
+}

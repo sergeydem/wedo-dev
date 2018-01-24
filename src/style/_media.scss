@@ -1,0 +1,115 @@
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+  #advancement {
+    .items {
+      .item:nth-child(3){
+        display: none;
+      }
+    }
+  }
+}
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+ 
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+ 
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+  .selectric-items {
+    .selectric-scroll {
+      ul {
+        li {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+@media only (min-width: 768px) and (max-width : 1200px) {
+  #advancement {
+    .wrap-btn:last-child {
+    display: none;
+    }
+    .item {
+      .wrap-btn {
+        display: block;
+      }
+    }
+  }
+}
+
+@media only (min-width: 576px) {
+  footer .items .item:last-child {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .modal-dialog {
+    max-width: 590px;
+  }
+}
+
+@media only (min-width: 992px) and (max-width : 1200px) {
+  #development {
+    .content {
+      .ribbon-phone {
+        .ribbon-text {
+          .wrap-thesis {
+            width: 292px;
+            .thesis li {
+              font-size: 18px;
+              padding: 8px 12px;
+            }
+          }
+        }
+        .wrap-btn {
+          margin-top: 120px;
+        }
+      }
+    }
+  }
+}

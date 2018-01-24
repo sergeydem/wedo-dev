@@ -1,0 +1,34 @@
+//bootstrap 4
+//@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600,800&subset=cyrillic');
+@import "fonts";
+@import "variable";
+@import "../../bower_components/bootstrap/scss/bootstrap-reboot";
+//@import "../../bower_components/bootstrap/scss/utilities";
+//@import "../../bower_components/bootstrap/scss/modal";
+//@import "../../bower_components/bootstrap/scss/buttons";
+//@import "../../bower_components/bootstrap/scss/forms";
+//@import "../../bower_components/bootstrap/scss/bootstrap";
+//@import "../../bower_components/bootstrap/scss/grid";
+//fonts.google
+@import "home";
+@import "vacansies";
+@import "selectric";
+@import "bootstrap-formhelpers.min.css";
+
+body {
+  background: $white;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  font-family: $OpenSansLight;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding-right: 0px !important;
+  h1, h2, h3, h4, h5, h6 {
+    font: inherit;
+    font-size: 100%;
+  }
+}
+//media
+@import "media";
