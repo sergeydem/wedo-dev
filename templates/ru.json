@@ -50,5 +50,77 @@
   "select_item2": "Интеграция с учётными системами",
   "select_item3": "Продвижение интернет-магазина",
   "alert": "Спасибо! Наш специалист свяжется с вами в ближайшее время.",
-  "error_mes": "Укажите Ваш телефон. (см. подсказку)"
+  "error_mes": "Укажите Ваш телефон. (см. подсказку)",
+  "table": {
+    "title": {
+      "name": "NAME",
+      "first": "NAME_1",
+      "second": "NAME_2",
+      "third":"NAME_3"
+    },
+    "body": [
+      {
+        "name": "ONE",
+        "first": true,
+        "first_text": "до 100 тыс",
+        "second": false,
+        "second_text": "дл 20 шт",
+        "third": true
+      },
+      {
+        "name": "TWO",
+        "first": true,
+        "second": true,
+        "third": true
+      },
+      {
+        "name": "THREE",
+        "first": true,
+        "second": false,
+        "third": true
+      },
+      {
+        "name": "ONE",
+        "first": true,
+        "second": false,
+        "third": true
+      },
+      {
+        "name": "TWO",
+        "first": true,
+        "second": true,
+        "third": true
+      },
+      {
+        "name": "THREE",
+        "first": true,
+        "second": false,
+        "third": true
+      },
+      {
+        "name": "ONE",
+        "first": true,
+        "second": false,
+        "third": true
+      },
+      {
+        "name": "TWO",
+        "first": true,
+        "second": true,
+        "third": true
+      },
+      {
+        "name": "THREE",
+        "first": true,
+        "second": false,
+        "third": true
+      }
+    ],
+    "footer": {
+      "name": "NAME",
+      "first": "NAME_1",
+      "second": "NAME_2",
+      "third":"NAME_3"
+    }
+  }
 }
