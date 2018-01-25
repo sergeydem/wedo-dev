@@ -141,11 +141,12 @@ header {
 
 /*------all section*/
 section {
-  margin: 40px 0;
+  margin: 100px 0;
 }
 /*------END all section*/
 /*------all title and description sections*/
 .wrap-title {
+  padding-bottom: 25px;
   h2 {
     font-size: 32px;
     margin: 0;
@@ -167,25 +168,9 @@ section {
 
 
 
-/*-------------------#feature--------------*/
+/*-------------------#feature*/
 #feature {
-  margin-top: 70px;
-  // ---------------------- Variables
-
-  $breakpoints: (
-          small: 35rem,
-          medium: 55rem,
-          large: 75rem,
-          extra-large: 90rem
-  );
-
-  // ---------------------- Mixins
-
-  @mixin breakpoint($width) {
-    @media screen and (min-width: map-get($breakpoints, $width)) {
-      @content;
-    }
-  }
+  margin-top: 100px;
 
   button,
   .button {
@@ -311,12 +296,16 @@ section {
     }
   }
 }
+/*-------------------END #feature*/
 
+/*-------------------#cost*/
+#cost {
+  .table-bordered td, .table-bordered th {
+    border: 0;
+  }
+}
+/*-------------------END #cost*/
 
-
-
-
-/*-------------------END #feature--------------*/
 
 
 /*--------------TABLE----------------*/
@@ -335,26 +324,27 @@ div.fixed-table-scroll-outer {
 }
 
 .table-container {
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  margin: 10px;
+  border: 2px solid $blue;
+  .table-container-header {
+    overflow: hidden;
+    width: 100%;
+  }
+  .table-container-body {
+    height: 400px;
+    overflow: auto;
+    width: 100%;
+  }
+  .table-container-footer {
+    overflow: hidden;
+    width: 100%;
+  }
 }
 
-.table-container-header {
-  overflow: hidden;
-  width: 100%;
-}
 
-.table-container-body {
-  height: 154px;
-  overflow: auto;
-  width: 100%;
-}
 
-.table-container-footer {
-  overflow: hidden;
-  width: 100%;
-}
+
+
+
 
 .table-container table {
   margin-bottom: 0px;

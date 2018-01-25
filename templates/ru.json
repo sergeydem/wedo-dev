@@ -17,6 +17,8 @@
   "title_tab_content5": "Заголовок 5",
   "title_tab6": "Оперативная техподдержка",
   "title_tab_content6": "Заголовок 6",
+  "title_cost": "Стоимость разработки интернет-магазина",
+  "descr_cost": "подзаголовок еще не придуман, но обязательнно будет",
   "btn1": "Бесплатная консультация",
   "btn4": "Отправить заявку",
   "btn5": "ОК",
@@ -32,14 +34,14 @@
   "error_mes": "Укажите Ваш телефон. (см. подсказку)",
   "table": {
     "title": {
-      "name": "NAME",
-      "first": "NAME_1",
-      "second": "NAME_2",
-      "third":"NAME_3"
+      "name": "Функционал",
+      "first": "Первый",
+      "second": "Средний",
+      "third":"Бизнес"
     },
     "body": [
       {
-        "name": "ONE",
+        "name": "Количество товаров",
         "first": true,
         "first_text": "до 100 тыс",
         "second": false,
@@ -47,49 +49,49 @@
         "third": true
       },
       {
-        "name": "TWO",
+        "name": "Количество групп товаров",
         "first": true,
         "second": true,
         "third": true
       },
       {
-        "name": "THREE",
+        "name": "База клиентов на сайте",
         "first": true,
         "second": false,
         "third": true
       },
       {
-        "name": "ONE",
+        "name": "Список заказов на сайте",
         "first": true,
         "second": false,
         "third": true
       },
       {
-        "name": "TWO",
+        "name": "Поиск по каталогу, свойствам и разделам",
         "first": true,
         "second": true,
         "third": true
       },
       {
-        "name": "THREE",
+        "name": "Сравнение товаров",
         "first": true,
         "second": false,
         "third": true
       },
       {
-        "name": "ONE",
+        "name": "Избранные товары",
         "first": true,
         "second": false,
         "third": true
       },
       {
-        "name": "TWO",
+        "name": "Новости",
         "first": true,
         "second": true,
         "third": true
       },
       {
-        "name": "THREE",
+        "name": "Поделиться в социальных сетях",
         "first": true,
         "second": false,
         "third": true
