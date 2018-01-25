@@ -1,5 +1,16 @@
 $( document ).ready(function() {
 
+
+//------------PARALLAX
+    $(window).scroll(function () {
+        $("header").css("background-position","50% " + (-$(this).scrollTop() / 2) + "px");
+    });
+//------------END PARALLAX
+
+
+
+
+
 //-------------------TABS
 // ----------------- Variables
 
@@ -23,11 +34,9 @@ $( document ).ready(function() {
 
     tabToggle.on('click', openTab);
 
-// ----------------- Constructor functions
+    tabToggle.first().trigger('click');
 
-    $(window).load(function(){
-        tabToggle.first().trigger('click');
-    });
+// ----------------- Constructor functions
 
 //-----------------END TABS
 

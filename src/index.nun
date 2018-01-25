@@ -61,48 +61,15 @@
         <div class="row">
             <div class="col-12">
                 <div class="tabs">
+                    {% for item in tabs %}
                     <div class="tab col-12 col-lg-5">
-                        <button class="tab-toggle active">{{ title_tab1 }}</button>
+                        <button class="tab-toggle ">{{ item.title_tab }}</button>
                     </div>
-                    <div class="content active col-12 col-lg-7">
-                        <h3 class="heading">{{ title_tab_content1 }}</h3>
-                        <p class="description">{{ descr_tab1 }}</p>
+                    <div class="content  col-12 col-lg-7">
+                        <h3 class="heading">{{ item.title_tab_content }}</h3>
+                        <p class="description">{{ item.descr_tab }}</p>
                     </div>
-                    <div class="tab col-12 col-lg-5">
-                        <button class="tab-toggle">{{ title_tab2 }}</button>
-                    </div>
-                    <div class="content col-12 col-lg-7">
-                        <h3 class="heading">{{ title_tab_content2 }}</h3>
-                        <p class="description">{{ descr_tab1 }}</p>
-                    </div>
-                    <div class="tab col-12 col-lg-5">
-                        <button class="tab-toggle">{{ title_tab3 }}</button>
-                    </div>
-                    <div class="content col-12 col-lg-7">
-                        <h3 class="heading">{{ title_tab_content3 }}</h3>
-                        <p class="description">{{ descr_tab1 }}</p>
-                    </div>
-                    <div class="tab col-12 col-lg-5">
-                        <button class="tab-toggle">{{ title_tab4 }}</button>
-                    </div>
-                    <div class="content col-12 col-lg-7">
-                        <h3 class="heading">{{ title_tab_content4 }}</h3>
-                        <p class="description">{{ descr_tab1 }}</p>
-                    </div>
-                    <div class="tab col-12 col-lg-5">
-                        <button class="tab-toggle">{{ title_tab5 }}</button>
-                    </div>
-                    <div class="content col-12 col-lg-7">
-                        <h3 class="heading">{{ title_tab_content5 }}</h3>
-                        <p class="description">{{ descr_tab1 }}</p>
-                    </div>
-                    <div class="tab col-12 col-lg-5">
-                        <button class="tab-toggle">{{ title_tab6 }}</button>
-                    </div>
-                    <div class="content col-12 col-lg-7">
-                        <h3 class="heading">{{ title_tab_content6 }}</h3>
-                        <p class="description">{{ descr_tab1 }}</p>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
