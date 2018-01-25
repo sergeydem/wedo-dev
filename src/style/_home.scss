@@ -1,39 +1,64 @@
 
-/*BEGIN header*/
+/*------------BEGIN header----------------*/
 
 header {
   height: 100vh;
-  position: relative;
   width: 100%;
-  background-color: $bgHead;
-  .top-line {
-    padding-top: 20px;
-    width: auto;
-    height: 95px;
-    color: $white;
-    .logo {
-      width: 95px;
-      @include media-breakpoint-up(md){
-        width: 170px;
+  background-blend-mode: multiply;
+  background-image: url(../img/bg-mockup-white-black.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: rgba(0, 0, 0, 0.85);
+  position: relative;
+  overflow: hidden;
+  .header-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding-bottom: 50px;
+    .top-line {
+      padding-top: 20px;
+      width: auto;
+      height: 95px;
+      color: $white;
+      .logo {
+        width: 95px;
+        @include media-breakpoint-up(md){
+          width: 170px;
+        }
+        @include media-breakpoint-up(lg){
+          width: 268px;
+        }
+        img {
+          width: 100%;
+        }
       }
-      @include media-breakpoint-up(lg){
-        width: 268px;
-      }
-
-      img {
-        width: 100%;
+      .phone {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        p {
+          margin: 0;
+          padding-left: 30px;
+          letter-spacing: 1px;
+        }
       }
     }
-
+    .title-center {
+      h1 {
+        color: $white;
+        text-align: center;
+        font-size: 40px;
+        font-family: $OpenSansSemibold;
+        letter-spacing: 2.2px;
+      }
+    }
   }
 }
-.header-items {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  padding-bottom: 50px;
-}
+/*---------------END header----------------------*/
 
 /*Begin bnt -------------------------BUTTON--------------------------*/
 .wrap-btn {
@@ -44,7 +69,7 @@ header {
     justify-content: center;
     a, button {
       text-decoration: none;
-      border: 2px solid $pink;
+      border: 2px solid $blue;
       padding: 10px 15px;
       font-size: 14px;
       border-radius: 0;
@@ -52,10 +77,10 @@ header {
       @include media-breakpoint-up(sm){
         font-size: 18px;
         padding: 14px 18px;
-        border: 4px solid $pink;
+        border: 4px solid $blue;
       }
       font-family: $OpenSansSemibold;
-      color: $pink;
+      color: $blue;
     }
     button:hover {
       cursor: pointer;;
@@ -74,7 +99,7 @@ header {
         top: 0;
         overflow: hidden;
         color: $white;
-        background: $pink;
+        background: $blue;
       }
       &:before {
         left: 0;
@@ -102,12 +127,149 @@ header {
     }
   }
 }
-/*End btn*/
+/*---------------------End btn----------------*/
 
-/*END header*/
+/*------all section-------*/
+section {
+  margin: 40px 0;
+}
+/*------END all section-------*/
+
+
+/*-------------------#feature--------------*/
+#feature {
+  margin-top: 70px;
+  .wrap-title {
+    h2 {
+      font-size: 32px;
+      margin: 0;
+      line-height: 40px;
+      &:last-child {
+        font-family: $OpenSansSemibold;
+        width: 80%;
+      }
+    }
+  }
+  // ---------------------- Variables
+
+  $breakpoints: (
+          small: 35rem,
+          medium: 55rem,
+          large: 75rem,
+          extra-large: 90rem
+  );
+
+  // ---------------------- Mixins
+
+  @mixin breakpoint($width) {
+    @media screen and (min-width: map-get($breakpoints, $width)) {
+      @content;
+    }
+  }
+
+  button,
+  .button {
+    position: relative;
+    display: inline-block;
+    color: $black;
+    background-color: transparent;
+    margin: 0 auto;
+    padding: 30px 0;
+    border: none;
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+    transition: all 0.3s;
+    &:hover {
+      color: $blue;
+      cursor: pointer;
+      &:before,
+      &:after {
+        color: $blue;
+      }
+    }
+    &:after,
+    &:before {
+      transition: all 0.3s;
+    }
+  }
+  /* ---------------------- Vertical Tabs */
+  .tabs {
+    position: relative;
+    min-height: 0;
+    transition: all 0.5s;
+    margin: 50px 0;
+
+    /* ---------------------- Tab */
+
+    .tab {
+      padding-right: 65px;
+      @include breakpoint(medium) {
+        float: left;
+        clear: left;
+      }
+
+      /* ---------------------- Tab Toggle */
+
+      .tab-toggle {
+        position: relative;
+        outline: none;
+        width: 100%;
+        font-family: $OpenSansLight;
+        text-align: right;
+        &.active {
+          color: $blue;
+          cursor: default;
+          font-family: $OpenSansSemibold;
+          border-right: 15px solid $blue;
+          padding-right: 10px;
+        }
+      }
+    }
+    /* ---------------------- Content */
+    .content {
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 2rem;
+      transition: all 1s;
+      @include breakpoint(medium) {
+        max-height: none;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        opacity: 0;
+        padding: 0rem 2rem 2rem 2rem;
+        transform: translateX(100%);
+      }
+      &.active {
+        max-height: 1000px; // Enough to always clear longest content
+        @include breakpoint(medium) {
+          max-height: none;
+          opacity: 1;
+          transform: none;
+        }
+      }
+      .heading {
+        font-size: 30px;
+        color: $blue;
+        font-family: $OpenSansSemibold;
+      }
+      .description {
+        font-size: 24px;
+        line-height: 36px;
+      }
+    }
+  }
+}
 
 
 
+
+
+/*-------------------END #feature--------------*/
+
+
+/*--------------TABLE----------------*/
 p.fixed-table-scroll-inner {
   width: 100%;
   height: 200px;
@@ -199,14 +361,10 @@ div.fixed-table-scroll-outer {
 .table-bordered > tfoot > tr:last-child > td {
   border-bottom-width: 0px;
 }
+/*--------------END TABLE----------------*/
 
 
-
-
-
-
-
-/*Begin footer*/
+/*----------------Begin footer--------------*/
 footer {
   background-color: $blueDark;
   color: $white;
@@ -218,7 +376,7 @@ footer {
     .item {
       &:last-child {
       order: -1;
-      margin: 30px 0;
+      //margin: 30px 0;
       display: flex;
       justify-content: flex-start;
       @include media-breakpoint-up(sm) {
@@ -248,9 +406,9 @@ footer {
     }
   }
 }
-/*End footer*/
+/*------------------End footer----------------------*/
 
-
+/*-------------Modal window, forms------------------*/
 .modal-content {
   border: none;
   border-radius: 0;
@@ -424,5 +582,4 @@ footer {
   padding: 5px 10px;
 }
 
-
-
+/*-------------END  Modal window, forms------------------*/

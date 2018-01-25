@@ -1,10 +1,42 @@
 $( document ).ready(function() {
 
+//-------------------TABS
+// ----------------- Variables
+
+    wrapper   = $(".tabs");
+    tabs      = wrapper.find(".tab");
+    tabToggle = wrapper.find(".tab-toggle");
+
+// ----------------- Functions
+
+    function openTab() {
+        var content     = $(this).parent().next(".content"),
+            activeItems = wrapper.find(".active");
+
+        if(!$(this).hasClass('active')) {
+            $(this).add(content).add(activeItems).toggleClass('active');
+            wrapper.css('min-height', content.outerHeight());
+        }
+    };
+
+// ----------------- Interactions
+
+    tabToggle.on('click', openTab);
+
+// ----------------- Constructor functions
+
+    $(window).load(function(){
+        tabToggle.first().trigger('click');
+    });
+
+//-----------------END TABS
+
+
+
+
     $(function() {
         $('select').selectric();
     });
-
-
 
 
 //открытие модального окна
@@ -61,6 +93,7 @@ $( document ).ready(function() {
     });
 
 
+    //TABLE---------------------------------------------------------
     var $body = $(".table-container-body"),
         $header = $(".table-container-header"),
         $footer = $(".table-container-footer");
@@ -108,5 +141,7 @@ $( document ).ready(function() {
 // Listen to Resize Window
     $(window).resize(redraw);
     redraw();
+
+    //END TABLE---------------------------------------------------------
 
 });

@@ -75,7 +75,8 @@ gulp.task('html:generate-ru', function () {
         }))
         .pipe(nunjucks({searchPaths: ["html"], ext: ".html"}))
         .pipe(htmlmin({collapseWhitespace: true, minifyCSS: true, minifyJS: true}))
-        .pipe(gulp.dest("./build/"));
+        .pipe(gulp.dest("./build/"))
+        .pipe(reload({stream: true}));
 });
 
 

@@ -7,11 +7,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
-            integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
-            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="css/main.css">
     <script src="js/jquery.selectric.js"></script>
@@ -23,14 +20,24 @@
 <header>
     <div class="container header-items">
         <div class="row top-line align-items-center">
-            <div class="col-5 col-md-3 col-lg-4 col-xl-4 item">
+            <div class="col-md-6 item">
                 <div class="logo">
-                    <a href=""><img src="img/logoWedo.png" alt="WeDo"></a>
+                    <a href=""><img src="img/logo.png" alt="WeDo"></a>
+                </div>
+            </div>
+            <div class="col-md-6 item">
+                <div class="phone">
+                    <p>{{ phone1 }}</p>
+                    <p>{{ phone2 }}</p>
                 </div>
             </div>
         </div>
         <div class="row">
-            <h1>Разработка эффективных продающих интернет-магазинов</h1>
+            <div class="col-12">
+                <div class="title-center">
+                    <h1>{{ header_title }}</h1>
+                </div>
+            </div>
         </div>
         <div class="row wrap-btn align-items-center justify-content-center">
             <div class="col-12 col-xl-4">
@@ -42,8 +49,74 @@
         </div>
     </div>
 </header>
+
+<section id="feature">
+    <div class="container">
+        <div class="row wrap-title justify-content-end">
+            <div class="col-12 col-md-12 col-xl-11">
+                <h2>{{title_feature}}</h2>
+                <h2>{{descr_feature}}</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="tabs">
+                    <div class="tab col-12 col-lg-5">
+                        <button class="tab-toggle active">{{ title_tab1 }}</button>
+                    </div>
+                    <div class="content active col-12 col-lg-7">
+                        <h3 class="heading">{{ title_tab_content1 }}</h3>
+                        <p class="description">{{ descr_tab1 }}</p>
+                    </div>
+                    <div class="tab col-12 col-lg-5">
+                        <button class="tab-toggle">{{ title_tab2 }}</button>
+                    </div>
+                    <div class="content col-12 col-lg-7">
+                        <h3 class="heading">{{ title_tab_content2 }}</h3>
+                        <p class="description">{{ descr_tab1 }}</p>
+                    </div>
+                    <div class="tab col-12 col-lg-5">
+                        <button class="tab-toggle">{{ title_tab3 }}</button>
+                    </div>
+                    <div class="content col-12 col-lg-7">
+                        <h3 class="heading">{{ title_tab_content3 }}</h3>
+                        <p class="description">{{ descr_tab1 }}</p>
+                    </div>
+                    <div class="tab col-12 col-lg-5">
+                        <button class="tab-toggle">{{ title_tab4 }}</button>
+                    </div>
+                    <div class="content col-12 col-lg-7">
+                        <h3 class="heading">{{ title_tab_content4 }}</h3>
+                        <p class="description">{{ descr_tab1 }}</p>
+                    </div>
+                    <div class="tab col-12 col-lg-5">
+                        <button class="tab-toggle">{{ title_tab5 }}</button>
+                    </div>
+                    <div class="content col-12 col-lg-7">
+                        <h3 class="heading">{{ title_tab_content5 }}</h3>
+                        <p class="description">{{ descr_tab1 }}</p>
+                    </div>
+                    <div class="tab col-12 col-lg-5">
+                        <button class="tab-toggle">{{ title_tab6 }}</button>
+                    </div>
+                    <div class="content col-12 col-lg-7">
+                        <h3 class="heading">{{ title_tab_content6 }}</h3>
+                        <p class="description">{{ descr_tab1 }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+</section>
+
 <div>
-    <section style="height: 1000px">
+    <section>
         <div class="table">
             <div class="table-container">
                 <div class="table-container-header">
@@ -230,8 +303,8 @@
     </div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="js/main.js"></script>
 
 
