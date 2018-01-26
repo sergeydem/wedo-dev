@@ -41,6 +41,10 @@ $( document ).ready(function() {
 //-----------------END TABS
 
 
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+
 
 
     $(function() {

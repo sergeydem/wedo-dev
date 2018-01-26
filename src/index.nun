@@ -193,6 +193,37 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-12 col-lg-7">
+                <div class="options">
+                    <div class="title-options">
+                        <p>Дополнительные опции:</p>
+                    </div>
+                    <form>
+                        <div>
+                            <input type="checkbox" id="check" name="check"  />
+                            <label for="check" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Checkbox</label>
+                        </div>
+                        <div>
+                            <input type='checkbox' id="check2" name="check2" />
+                            <label for="check2" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottomdddd asas">Checkbox 2</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-12 col-lg-5">
+                <div class="cost">
+                    <div class="price">
+                        <p>Стоимость</p>
+                        <div class="total-price">$3100</div>
+                    </div>
+                    <div class="time">
+                        <p>Сроки</p>
+                        <div class="total-time">3 месяца</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
