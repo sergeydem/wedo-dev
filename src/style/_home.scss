@@ -5,7 +5,7 @@ header {
   height: 100vh;
   width: 100%;
   background-blend-mode: multiply;
-  background-image: url(../img/bg-mockup-white-black-crop.png);
+  background-image: url(../img/bg-mockup-crop-min.png);
   //background-position: top;
   background-position: 50% 0;
   background-repeat: no-repeat;
@@ -306,105 +306,137 @@ section {
   .table-bordered td, .table-bordered th {
     border: 0;
   }
+  .table-hover tbody tr:hover {
+    background-color: rgba(68, 125, 152, 0.07);
+  }
+  colgroup {
+    col:nth-child(1){
+      width: 600px;
+    }
+    col:nth-child(2){
+      width: 150px;
+    }
+    col:nth-child(3){
+      width: 150px;
+    }
+    col:nth-child(4){
+      width: 150px;
+    }
+  }
+  /*--------------TABLE----------------*/
+  p.fixed-table-scroll-inner {
+    width: 100%;
+    height: 200px;
+  }
+
+  div.fixed-table-scroll-outer {
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    width: 200px;
+    height: 150px;
+    overflow: hidden;
+  }
+
+  .table-container {
+    border: 2px solid $blue;
+    .table-container-header {
+      overflow: hidden;
+      width: 100%;
+      thead {
+        tr {
+          height: 80px;
+          border-bottom: 2px solid $blue;
+          th:nth-child(2){
+            text-align: center;
+          }
+          th:nth-child(3){
+            text-align: center;
+          }
+          th:nth-child(4){
+            text-align: center;
+          }
+          th {
+            font-family: $OpenSansSemibold;
+            vertical-align: middle;
+            font-size: 24px;
+          }
+        }
+      }
+    }
+    .table-container-body {
+      height: 400px;
+      overflow: auto;
+      width: 100%;
+      tbody {
+        tr td {
+          text-align: center;
+          .material-icons.check-ico {
+            color: $blue;
+          }
+          .material-icons.close-ico {
+            color: $gray;
+          }
+        }
+        tr td:nth-child(1) {
+          text-align: left;
+        }
+      }
+    }
+    .table-container-footer {
+      overflow: hidden;
+      width: 100%;
+      tfoot {
+        tr {
+          height: 130px;
+          border-top: 2px solid $blue;
+          th {
+            text-align: center;
+            font-family: $OpenSansSemibold;
+            vertical-align: middle;
+            font-size: 24px;
+            .wrap-btn {
+              height: auto;
+              .button {
+                a, button {
+                  padding: 10px 15px;
+                  @include media-breakpoint-up(sm){
+                    padding: 8px 18px;
+                  }
+                }
+              }
+            }
+          }
+          th:nth-child(1){
+            text-align:  left;
+          }
+        }
+        .price {
+          padding-bottom: 18px;
+        }
+      }
+    }
+    table {
+      margin-bottom: 0px;
+      table-layout: fixed;
+      td, th {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+    .table-bordered {
+      border: 0px;
+    }
+  }
+
+  /*--------------END TABLE*/
 }
 /*-------------------END #cost*/
 
 
 
-/*--------------TABLE----------------*/
-p.fixed-table-scroll-inner {
-  width: 100%;
-  height: 200px;
-}
 
-div.fixed-table-scroll-outer {
-  top: 0;
-  left: 0;
-  visibility: hidden;
-  width: 200px;
-  height: 150px;
-  overflow: hidden;
-}
-
-.table-container {
-  border: 2px solid $blue;
-  .table-container-header {
-    overflow: hidden;
-    width: 100%;
-  }
-  .table-container-body {
-    height: 400px;
-    overflow: auto;
-    width: 100%;
-  }
-  .table-container-footer {
-    overflow: hidden;
-    width: 100%;
-  }
-}
-
-
-
-
-
-
-
-.table-container table {
-  margin-bottom: 0px;
-  table-layout: fixed;
-}
-
-.table-container table td,
-.table-container table th {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.table-bordered {
-  border: 0px;
-}
-.table-bordered > thead > tr > th,
-.table-bordered > thead > tr > td {
-  border-bottom-width: 2px;
-}
-.table-bordered > tfoot > tr > th,
-.table-bordered > tfoot > tr > td {
-  border-top-width: 2px;
-}
-.table-bordered > tfoot > tr > th,
-.table-bordered > tfoot > tr > td {
-  border-bottom-width: 0px;
-}
-/*Esquerda*/
-.table-bordered > thead > tr > th:first-child,
-.table-bordered > tbody > tr > th:first-child,
-.table-bordered > tfoot > tr > th:first-child,
-.table-bordered > thead > tr > td:first-child,
-.table-bordered > tbody > tr > td:first-child,
-.table-bordered > tfoot > tr > td:first-child {
-  border-left-width: 0px;
-}
-/*Direita*/
-.table-bordered > thead > tr > th:last-child,
-.table-bordered > tbody > tr > th:last-child,
-.table-bordered > tfoot > tr > th:last-child,
-.table-bordered > thead > tr > td:last-child,
-.table-bordered > tbody > tr > td:last-child,
-.table-bordered > tfoot > tr > td:last-child {
-  border-right-width: 0px;
-}
-/*Topo*/
-.table-bordered > thead > tr:first-child > th,
-.table-bordered > thead > tr:first-child > td {
-  border-top-width: 0px;
-}
-/*Baixo*/
-.table-bordered > tfoot > tr:last-child > th,
-.table-bordered > tfoot > tr:last-child > td {
-  border-bottom-width: 0px;
-}
-/*--------------END TABLE----------------*/
 
 
 /*----------------Begin footer--------------*/

@@ -101,6 +101,12 @@
                         </div>
                         <div class="table-container-body">
                             <table class="table table-hover table-condensed table-bordered">
+                                <colgroup>
+                                    <col></col>
+                                    <col></col>
+                                    <col></col>
+                                    <col></col>
+                                </colgroup>
                                 <tbody>
                                 {% for item in  table.body %}
                                     <tr>
@@ -110,9 +116,9 @@
                                             {% if item.first_text  %}
                                                 {{ item.first_text }}
                                             {% elseif item.first %}
-                                                <div><i class="material-icons">done</i></div>
+                                                <div><i class="material-icons check-ico">done</i></div>
                                             {% else %}
-                                                <div><i class="material-icons">close</i></div>
+                                                <div><i class="material-icons close-ico">close</i></div>
                                             {% endif %}
                                         </td>
 
@@ -120,9 +126,9 @@
                                             {% if item.second_text  %}
                                                 {{ item.second_text }}
                                             {% elseif item.second %}
-                                                <div><i class="material-icons">done</i></div>
+                                                <div><i class="material-icons check-ico">done</i></div>
                                             {% else %}
-                                                <div><i class="material-icons">close</i></div>
+                                                <div><i class="material-icons close-ico">close</i></div>
                                             {% endif %}
                                         </td>
 
@@ -130,9 +136,9 @@
                                             {% if item.third_text  %}
                                                 {{ item.third_text }}
                                             {% elseif item.third %}
-                                                <div><i class="material-icons">done</i></div>
+                                                <div><i class="material-icons check-ico">done</i></div>
                                             {% else %}
-                                                <div><i class="material-icons">close</i></div>
+                                                <div><i class="material-icons close-ico">close</i></div>
                                             {% endif %}
                                         </td>
 
@@ -147,27 +153,36 @@
                                 <tr>
                                     <th>{{ table.footer.name }}</th>
                                     <th>
-                                        <div>
+                                        <div class="price">
                                             {{ table.footer.first }}
                                         </div>
-                                        <div>
-                                            <button> AHA </button>
+                                        <div class="wrap-btn">
+                                            <div class="button">
+                                                <a href="#" data-toggle="modal" data-target="#myModal" class="btn-pink"
+                                                   data-wipe="{{ btn6 }}">{{ btn6 }}</a>
+                                            </div>
                                         </div>
                                     </th>
                                     <th>
-                                        <div>
+                                        <div class="price">
                                             {{ table.footer.second }}
                                         </div>
-                                        <div>
-                                            <button> AHA </button>
+                                        <div class="wrap-btn">
+                                            <div class="button">
+                                                <a href="#" data-toggle="modal" data-target="#myModal" class="btn-pink"
+                                                   data-wipe="{{ btn6 }}">{{ btn6 }}</a>
+                                            </div>
                                         </div>
                                     </th>
                                     <th>
-                                        <div>
+                                        <div class="price">
                                             {{ table.footer.third }}
                                         </div>
-                                        <div>
-                                            <button> AHA </button>
+                                        <div class="wrap-btn">
+                                            <div class="button">
+                                                <a href="#" data-toggle="modal" data-target="#myModal" class="btn-pink"
+                                                   data-wipe="{{ btn6 }}">{{ btn6 }}</a>
+                                            </div>
                                         </div>
                                     </th>
                                 </tr>
