@@ -47,37 +47,44 @@
     {
       "label_option": "Обмен с 1С",
       "id":"mycheck1",
-      "for":"mycheck1"
+      "for":"mycheck1",
+      "tooltip":"<ul><li>Управление ассортиментом ИМ из 1С</li><li>Выгрузка остатков и цен на сайт</li><li>Загрузка заказов в 1С</li><li>Хранение фотографий товаров за пределами базы 1С</li></ul>"
     },
     {
       "label_option": "Оплата на сайте платёжной картой через систему Platon",
       "id":"mycheck2",
-      "for":"mycheck2"
+      "for":"mycheck2",
+      "tooltip":""
     },
     {
       "label_option": "Новая почта API на сайте",
       "id":"mycheck3",
-      "for":"mycheck3"
+      "for":"mycheck3",
+      "tooltip":"<ul><li>Выбор города и склада делает заказ удобнее</li><li>Меньше ошибок при заполнении адреса доставки</li></ul>"
     },
     {
       "label_option": "Новая почта API в 1С",
       "id":"mycheck4",
-      "for":"mycheck4"
+      "for":"mycheck4",
+      "tooltip":"<ul><li>Формирование ТТН на основе заказов</li><li>Контроль оплат наложенных платежей</li></ul>"
     },
     {
       "label_option": "Интеграция с CRM",
       "id":"mycheck5",
-      "for":"mycheck5"
+      "for":"mycheck5",
+      "tooltip":"<ul><li>Полезно для длительных сделок</li></ul>"
     },
     {
       "label_option": "Переезд на новый сайт",
       "id":"mycheck6",
-      "for":"mycheck6"
+      "for":"mycheck6",
+      "tooltip":"<ul><li>Перенос карточек товара</li><li>Перенаправление страниц</li></ul>"
     },
     {
       "label_option": "СЕО-фильтр+настройка",
       "id":"mycheck7",
-      "for":"mycheck7"
+      "for":"mycheck7",
+      "tooltip":""
     }
   ],
   "title_cost": "Стоимость разработки интернет-магазина",

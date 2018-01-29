@@ -201,7 +201,8 @@
                     </div>
                     <form class="checkbox-form">
                         {% for item in options %}
-                        <label for="{{ item.for }}" class="c-custom-check" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+                        <label for="{{ item.for }}" class="c-custom-check" data-toggle="tooltip" data-placement="top" data-html="true"
+                               title="{{ item.tooltip }}">
                             {{ item.label_option }}
                             <input required type="checkbox" id="{{ item.id }}">
                             <div class="c-custom-check__indicator"></div>
