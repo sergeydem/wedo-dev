@@ -238,6 +238,34 @@
     </div>
 </section>
 
+<section id="why-us">
+    <div class="container">
+        <div class="row wrap-title justify-content-end">
+            <div class="col-12 col-md-12 col-xl-11">
+                <h2>{{title_why_us}}</h2>
+                <h2>{{descr_why_us}}</h2>
+            </div>
+        </div>
+        <div class="row wrap-why-us">
+            {% for item in fact %}
+            <div class="col item-fact">
+                <div class="wrap-fact">
+                    <div class="icon">
+                        <img src="{{ item.img }}" alt="{{ item.img_alt }}">
+                    </div>
+                    <div class="text">
+                        <p>{{ item.text_fact }}</p>
+                    </div>
+                </div>
+            </div>
+                {% if loop.index == 3 %}
+                    <div class="w-100"></div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
 <footer>
     <div class="container">
         <div class="row items justify-content-center align-items-center no-gutters">
