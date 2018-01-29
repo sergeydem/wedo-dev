@@ -609,6 +609,47 @@ section {
 /*-------------------END #why-us*/
 
 
+/*------------------#promotion*/
+
+#promotion {
+  .all-card {
+    .card-wrap {
+      display: flex;
+      justify-content: center;
+      .card {
+        border: 1px solid $blue;
+        border-radius: 0;
+        margin-top: 80px;
+        transition: all 0.5s ease;
+        max-width: 275px;
+        min-height: 330px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        &:hover {
+          cursor: pointer;
+          margin-top: 70px;
+        }
+        .title-card {
+          font-size: 60px;
+          color: $blue;
+          text-align: center;
+          p {
+            margin: 0;
+          }
+        }
+        .description-card {
+          text-align: center;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+/*------------------END #promotion*/
+
+
 
 
 
@@ -620,7 +661,7 @@ footer {
   .items {
     height: 250px;
     @include media-breakpoint-up(sm) {
-      height: 130px;
+      height: 250px;
     }
     .item {
       &:last-child {
@@ -644,13 +685,29 @@ footer {
       }
       p {
         text-align: center;
+        margin: 0;
         @include media-breakpoint-between(sm, md){
           font-size: 10px;
           margin-top: 0;
         }
+        @include media-breakpoint-down(sm){
+          padding-top: 10px;
+        }
         font-size: 12px;
-        margin-top: 10px;
         color: $gray;
+      }
+      .footer-phone {
+        display: flex;
+        a {
+          margin: 15px 0;
+          color: $white;
+          padding: 0 10px;
+          text-decoration: none;
+          font-size: 14px;
+        }
+        @include media-breakpoint-down(sm){
+          display: none;
+        }
       }
     }
   }

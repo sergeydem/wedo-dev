@@ -266,12 +266,44 @@
     </div>
 </section>
 
+<section id="promotion">
+    <div class="container">
+        <div class="row wrap-title justify-content-end">
+            <div class="col-12 col-md-12 col-xl-11">
+                <h2>{{title_promotion}}</h2>
+                <h2>{{descr_promotion}}</h2>
+            </div>
+        </div>
+        <div class="row all-card">
+            {% for item in card %}
+            <div class="col-12 col-lg-4">
+                <div class="card-wrap">
+                    <div class="card">
+                        <div class="title-card">
+                            <p>{{ item.title_card }}</p>
+                        </div>
+                        <div class="description-card">
+                            <p>{{ item.descr_card }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
 <footer>
     <div class="container">
         <div class="row items justify-content-center align-items-center no-gutters">
             <div class="col-12 col-md-12 col-xl-12 item justify-content-center align-items-center">
                 <div class="logo-footer">
-                    <a href=""><img src="img/logoWedo.png" alt="WeDo"></a>
+                    <a href=""><img src="../img/logo.png" alt="WeDo"></a>
+                    <div class="footer-phone">
+                        <a href="{{ phone1_href }}">{{ phone1 }}</a>
+                        <a href="{{ phone2_href }}">{{ phone2 }}</a>
+                        <a href="{{ phone3_href }}">{{ phone3 }}</a>
+                    </div>
                     <p>{{сopyright}}</p>
                 </div>
             </div>
