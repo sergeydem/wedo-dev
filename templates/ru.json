@@ -160,27 +160,31 @@
       {
         "name": "Количество товаров",
         "first": true,
-        "first_text": "до 100 тыс",
+        "first_text": "до 1000",
         "second": false,
-        "second_text": "дл 20 шт",
-        "third": true
+        "second_text": "до 5000",
+        "third": true,
+        "third_text":"&#8734"
       },
       {
         "name": "Количество групп товаров",
+        "first": true,
+        "first_text": "до 20",
+        "second": true,
+        "second_text": "до 50",
+        "third": true,
+        "third_text":"&#8734"
+      },
+      {
+        "name": "База клиентов на сайте",
         "first": true,
         "second": true,
         "third": true
       },
       {
-        "name": "База клиентов на сайте",
-        "first": true,
-        "second": false,
-        "third": true
-      },
-      {
         "name": "Список заказов на сайте",
         "first": true,
-        "second": false,
+        "second": true,
         "third": true
       },
       {
@@ -192,13 +196,13 @@
       {
         "name": "Сравнение товаров",
         "first": true,
-        "second": false,
+        "second": true,
         "third": true
       },
       {
         "name": "Избранные товары",
         "first": true,
-        "second": false,
+        "second": true,
         "third": true
       },
       {
@@ -210,6 +214,162 @@
       {
         "name": "Поделиться в социальных сетях",
         "first": true,
+        "second": true,
+        "third": true
+      },
+      {
+        "name": "Гибкая настройка дизайна",
+        "first": true,
+        "second": true,
+        "third": true
+      },
+      {
+        "name": "Умный фильтр в каталоге и поиске",
+        "first": true,
+        "second": true,
+        "third": true
+      },
+      {
+        "name": "Разработка структуры каталога",
+        "first": true,
+        "second": true,
+        "third": true
+      },
+      {
+        "name": "СЕО-оптимизированные описания разделов каталога",
+        "first": true,
+        "second": true,
+        "third": true
+      },
+      {
+        "name": "СЕО-оптимизированные описания общих страниц ИМ",
+        "first": true,
+        "second": true,
+        "third": true
+      },
+      {
+        "name": "Оптимизированный хостинг на год",
+        "first": true,
+        "second": true,
+        "third": true
+      },
+      {
+        "name": "Работа по протоколу https",
+        "first": true,
+        "second": true,
+        "third": true
+      },
+      {
+        "name": "Функция купить в 1 клик",
+        "first": true,
+        "second": true,
+        "third": true
+      },
+      {
+        "name": "Покупка без регистрации",
+        "first": false,
+        "second": true,
+        "third": true
+      },
+      {
+        "name": "Разновидности (SKU)",
+        "first": false,
+        "second": true,
+        "third": true
+      },
+      {
+        "name": "Статусы наличия товара (в наличии, под заказ, недоступно)",
+        "first": false,
+        "second": true,
+        "third": true
+      },
+      {
+        "name": "Отзывы о товаре",
+        "first": false,
+        "second": true,
+        "third": true
+      },
+      {
+        "name": "Информирование менеджеров о новых заказах в Telegram",
+        "first": false,
+        "second": true,
+        "third": true
+      },
+      {
+        "name": "Подробная информация о производителе товара",
+        "first": false,
+        "second": true,
+        "third": true
+      },
+      {
+        "name": "Отдельные страницы для новинок, распродаж и т.д.",
+        "first": false,
+        "second": true,
+        "third": true
+      },
+      {
+        "name": "Регистрация и авторизация через соц.сети",
+        "first": false,
+        "second": true,
+        "third": true
+      },
+      {
+        "name": "Чат с менеджером на сайте",
+        "first": false,
+        "second": true,
+        "third": true
+      },
+      {
+        "name": "A/B тестирование страниц",
+        "first": false,
+        "second": false,
+        "third": true
+      },
+      {
+        "name": "Email-рассылки с анализом конверсии",
+        "first": false,
+        "second": false,
+        "third": true
+      },
+      {
+        "name": "Отзывы о магазине",
+        "first": false,
+        "second": false,
+        "third": true
+      },
+      {
+        "name": "Несколько типов цен (оптовая, розничная и т.д.)",
+        "first": false,
+        "second": false,
+        "third": true
+      },
+      {
+        "name": "Наборы и комплекты",
+        "first": false,
+        "second": false,
+        "third": true
+      },
+      {
+        "name": "Выставление счёта на сайте",
+        "first": false,
+        "second": false,
+        "third": true
+      },
+      {
+        "name": "Накопительные скидки",
+        "first": false,
+        "second": false,
+        "third": true
+      },
+      {
+        "name": "Баллы и бонусы",
+        "first": false,
+        "second": false,
+        "third": true
+      },
+      {
+        "name": "Холдинговая структура",
+        "first": false,
         "second": false,
         "third": true
       }
