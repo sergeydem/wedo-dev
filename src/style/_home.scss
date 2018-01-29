@@ -496,6 +496,39 @@ section {
       }
     }
   }
+
+/*-------------tabs*/
+
+.custom-tabs-mobile {
+  .nav {
+    flex-wrap: nowrap;
+  }
+  .nav-tabs {
+    display: flex;
+    justify-content: space-between;
+    border: 0;
+    .nav-item {
+      width: 100%;
+      .nav-link {
+        border-radius: 0;
+        border: 1px solid $blue;
+        &.active {
+          border-color: $blue $blue $white;
+        }
+      }
+
+    }
+  }
+  .tab-content {
+    .tab-pane {
+      border: 1px solid $blue;
+      border-color: $white $blue $blue;
+    }
+  }
+}
+
+
+  /*-------------END tabs*/
 }
 
 

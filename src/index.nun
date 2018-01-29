@@ -85,6 +85,53 @@
         </div>
         <div class="row">
             <div class="col-12">
+                <div class="custom-tabs-mobile">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#home" role="tab">Первый</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#profile" role="tab">Средний</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#messages" role="tab">Бизнес</a>
+                        </li>
+                    </ul>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="home" role="tabpanel">
+                            <div class="price">
+                                <p>$2000</p>
+                            </div>
+                            <ul>
+                                <li>sss</li>
+                                <li>sddddss</li>
+                                <li>sss</li>
+                                <li>fg</li>
+                                <li>fffsss</li>
+                                <li>sdsdkk34</li>
+                            </ul>
+                            <div class="wrap-btn">
+                                <div class="button">
+                                    <a href="#" data-toggle="modal" data-target="#myModal" class="btn-pink"
+                                       data-wipe="{{ btn6 }}">{{ btn6 }}</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="profile" role="tabpanel">
+
+                        </div>
+                        <div class="tab-pane" id="messages" role="tabpanel">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
                 <div class="table">
                     <div class="table-container">
                         <div class="table-container-header">
