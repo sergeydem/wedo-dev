@@ -197,29 +197,40 @@
             <div class="col-12 col-lg-7">
                 <div class="options">
                     <div class="title-options">
-                        <p>Дополнительные опции:</p>
+                        <p>{{ title_options }}</p>
                     </div>
-                    <form>
-                        <div>
-                            <input type="checkbox" id="check" name="check"  />
-                            <label for="check" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Checkbox</label>
-                        </div>
-                        <div>
-                            <input type='checkbox' id="check2" name="check2" />
-                            <label for="check2" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottomdddd asas">Checkbox 2</label>
-                        </div>
+                    <form class="checkbox-form">
+                        {% for item in options %}
+                        <label for="{{ item.for }}" class="c-custom-check" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+                            {{ item.label_option }}
+                            <input required type="checkbox" id="{{ item.id }}">
+                            <div class="c-custom-check__indicator"></div>
+                        </label>
+                        {% endfor %}
                     </form>
                 </div>
             </div>
             <div class="col-12 col-lg-5">
-                <div class="cost">
-                    <div class="price">
-                        <p>Стоимость</p>
-                        <div class="total-price">$3100</div>
+                <div class="wrap-cost">
+                    <div class="cost">
+                        <div class="price">
+                            <p>{{ title_total_cost }}</p>
+                            <div class="total-price">$3100</div>
+                        </div>
+                        <div class="time">
+                            <p>{{ title_total_time }}</p>
+                            <div class="total-time">3 месяца</div>
+                        </div>
                     </div>
-                    <div class="time">
-                        <p>Сроки</p>
-                        <div class="total-time">3 месяца</div>
+                </div>
+            </div>
+        </div>
+        <div class="row home-button">
+            <div class="col-12">
+                <div class="wrap-btn">
+                    <div class="button">
+                        <a href="#" data-toggle="modal" data-target="#myModal" class="btn-pink"
+                           data-wipe="{{ btn2 }}">{{ btn2 }}</a>
                     </div>
                 </div>
             </div>

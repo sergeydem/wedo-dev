@@ -442,44 +442,133 @@ section {
 
     /*--------------END TABLE*/
   }
+  /*----------Options*/
+  .options {
+    .title-options {
+      margin-bottom: 25px;
+      p {
+        font-size: 24px;
+        padding: 0;
+        margin: 0;
+        font-family: $OpenSansSemibold;
+      }
+    }
+    .checkbox-form {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  /*----------END Options*/
+  .wrap-cost {
+    display: flex;
+    justify-content: center;
+    .cost {
+      width: 350px;
+      border: 1px solid $blue;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 0;
+      .price {
+        margin-bottom: 30px;
+      }
+      .total-price, .total-time {
+        font-family: $OpenSansRegular;
+        font-size: 44px;
+        color: $blue;
+      }
+      p {
+        font-size: 24px;
+        margin: 0;
+        text-align: center;
+      }
+    }
+  }
+  .home-button {
+    margin: 60px 0 30px 0;
+    .wrap-btn {
+      height: auto;
+      .button {
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+    }
+  }
 }
+
+
+/*Checkbox*/
+.c-custom-check {
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  margin-bottom: 20px;
+
+  input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+}
+// Indicator (element that replaces the checkbox)
+.c-custom-check__indicator {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 20px;
+  height: 20px;
+
+  // Tick: transparent by default
+  &:after {
+    position: absolute;
+    left: 5px;
+    top: 1px;
+    width: 8px;
+    height: 12px;
+    content: '';
+    border-style: solid;
+    border-color: transparent;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg)
+  }
+
+  // Checked
+  input:checked ~ & {
+    background: $blue;
+
+    &:after {
+      border-color: $white;
+    }
+  }
+
+  // Hover & checked
+  label:hover > input:checked ~ &,
+  input:focus:checked ~ &{
+    background: $blue;
+  }
+
+  // Required
+  input:required ~ & {
+    border: 1px solid $blue;
+  }
+
+  // Required & checked
+  input:required:valid ~ & {
+    border-color: transparent;
+  }
+}
+/*END Checkbox*/
+
+
+
+
+
 /*-------------------END #cost*/
 
-input[type=checkbox], input[type=radio] {display: none;}
 
-input[type=checkbox] + label:before {
-  content: "\2713";
-  color: transparent;
-  display: inline-block;
-  border: 1px solid $blue;
-  font-size: 20px;
-  line-height: 22px;
-  margin: -5px 5px 0 0;
-  height: 20px;
-  width: 20px;
-  text-align: center;
-  vertical-align: middle;
-  transition: color ease .3s;
-}
 
-input[type=checkbox]:checked + label:before {
-  color: $blue;
-}
-
-.tooltip-inner {
-  max-width: 200px;
-  padding: 3px 8px;
-  color: #fff;
-  text-align: center;
-  background-color: $gray;
-  border-radius: 0;
-}
-.tooltip.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .tooltip.bs-tooltip-bottom .arrow::before {
-  margin-left: -3px;
-  content: "";
-  border-width: 0 5px 5px;
-  border-bottom-color: $gray;
-}
 
 
 
