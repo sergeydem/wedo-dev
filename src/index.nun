@@ -105,19 +105,9 @@
                                 <p>{{ cards.first_content.price }}</p>
                             </div>
                             <ul>
-                                <li><span>{{ cards.first_content.item1 }}</span></li>
-                                <li><span>{{ cards.first_content.item2 }}</span></li>
-                                <li><span>{{ cards.first_content.item3 }}</span></li>
-                                <li><span>{{ cards.first_content.item4 }}</span></li>
-                                <li><span>{{ cards.first_content.item5 }}</span></li>
-                                <li><span>{{ cards.first_content.item6 }}</span></li>
-                                <li><span>{{ cards.first_content.item7 }}</span></li>
-                                <li><span>{{ cards.first_content.item8 }}</span></li>
-                                <li><span>{{ cards.first_content.item9 }}</span></li>
-                                <li><span>{{ cards.first_content.item10 }}</span></li>
-                                <li><span>{{ cards.first_content.item11 }}</span></li>
-                                <li><span>{{ cards.first_content.item12 }}</span></li>
-                                <li><span>{{ cards.first_content.item13 }}</span></li>
+                                {% for item in cards.first_content.items %}
+                                <li><span>{{ item.name }}</span></li>
+                                {% endfor %}
                             </ul>
                             <div class="wrap-btn">
                                 <div class="button">
@@ -131,18 +121,9 @@
                                 <p>{{ cards.second_content.price }}</p>
                             </div>
                             <ul>
-                                <li><span>{{ cards.second_content.item1 }}</span></li>
-                                <li><span>{{ cards.second_content.item2 }}</span></li>
-                                <li><span>{{ cards.second_content.item3 }}</span></li>
-                                <li><span>{{ cards.second_content.item4 }}</span></li>
-                                <li><span>{{ cards.second_content.item5 }}</span></li>
-                                <li><span>{{ cards.second_content.item6 }}</span></li>
-                                <li><span>{{ cards.second_content.item7 }}</span></li>
-                                <li><span>{{ cards.second_content.item8 }}</span></li>
-                                <li><span>{{ cards.second_content.item9 }}</span></li>
-                                <li><span>{{ cards.second_content.item10 }}</span></li>
-                                <li><span>{{ cards.second_content.item11 }}</span></li>
-                                <li><span>{{ cards.second_content.item12 }}</span></li>
+                                {% for item in cards.second_content.items %}
+                                    <li><span>{{ item.name }}</span></li>
+                                {% endfor %}
                             </ul>
                             <div class="wrap-btn">
                                 <div class="button">
@@ -156,18 +137,9 @@
                                 <p>{{ cards.third_content.price }}</p>
                             </div>
                             <ul>
-                                <li><span>{{ cards.third_content.item1 }}</span></li>
-                                <li><span>{{ cards.third_content.item2 }}</span></li>
-                                <li><span>{{ cards.third_content.item3 }}</span></li>
-                                <li><span>{{ cards.third_content.item4 }}</span></li>
-                                <li><span>{{ cards.third_content.item5 }}</span></li>
-                                <li><span>{{ cards.third_content.item6 }}</span></li>
-                                <li><span>{{ cards.third_content.item7 }}</span></li>
-                                <li><span>{{ cards.third_content.item8 }}</span></li>
-                                <li><span>{{ cards.third_content.item9 }}</span></li>
-                                <li><span>{{ cards.third_content.item10 }}</span></li>
-                                <li><span>{{ cards.third_content.item11 }}</span></li>
-                                <li><span>{{ cards.third_content.item12 }}</span></li>
+                                {% for item in cards.third_content.items %}
+                                    <li><span>{{ item.name }}</span></li>
+                                {% endfor %}
                             </ul>
                             <div class="wrap-btn">
                                 <div class="button">
@@ -197,6 +169,7 @@
                                 </thead>
                             </table>
                         </div>
+                        <hr class="header-shadow">
                         <div class="table-container-body">
                             <table class="table table-hover table-condensed table-bordered">
                                 <colgroup>
@@ -245,6 +218,7 @@
                                 </tbody>
                             </table>
                         </div>
+                        <hr class="bottom-shadow">
                         <div class="table-container-footer">
                             <table class="table table-striped table-hover table-condensed table-bordered">
                                 <tfoot>
@@ -373,22 +347,25 @@
                 <h2>{{descr_promotion}}</h2>
             </div>
         </div>
-        <div class="row all-card">
-            {% for item in card %}
-            <div class="col-12 col-lg-4">
-                <div class="card-wrap">
-                    <div class="card">
-                        <div class="title-card">
-                            <p>{{ item.title_card }}</p>
-                        </div>
-                        <div class="description-card">
-                            <p>{{ item.descr_card }}</p>
+        <div class="row append-dots">
+            <div class="all-card owl-carousel">
+                {% for item in card %}
+                    <div class="item">
+                        <div class="card-wrap">
+                            <div class="card">
+                                <div class="title-card">
+                                    <p>{{ item.title_card }}</p>
+                                </div>
+                                <div class="description-card">
+                                    <p>{{ item.descr_card }}</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
+
     </div>
 </section>
 
@@ -492,6 +469,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="js/owl.carousel.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

@@ -349,6 +349,24 @@ section {
 
     .table-container {
       border: 2px solid $blue;
+      position: relative;
+      .header-shadow,
+      .bottom-shadow {
+        position: absolute;
+        z-index: 2;
+        color: transparent;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+      }
+      .header-shadow {
+        top: 80px;
+        box-shadow:0 2px 9px 2px rgba(104, 116, 122, 0.3);
+      }
+      .bottom-shadow {
+        bottom: 130px;
+        box-shadow: 0 -2px 9px 2px  rgba(104, 116, 122, 0.3);
+      }
       .table-container-header {
         overflow: hidden;
         width: 100%;
@@ -994,4 +1012,21 @@ footer {
   padding: 5px 10px;
 }
 
+.owl-dot {
+  background: red;
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+}
+.owl-dot.active {
+  background: purple;
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+}
+.owl-dots {
+  display: flex;
+  height: 20px;
+  justify-content: center;
+}
 /*-------------END  Modal window, forms------------------*/

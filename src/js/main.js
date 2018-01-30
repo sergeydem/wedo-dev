@@ -1,5 +1,27 @@
 $( document ).ready(function() {
 
+//------------OWL
+    $('.owl-carousel').owlCarousel({
+        nav: false,
+        dots: true,
+        responsive:{
+            0:{
+                loop: true,
+                items: 1
+            },
+            600:{
+                margin: 10,
+                loop: true,
+                items: 2
+            },
+            1000:{
+                dots: false,
+                margin: 10,
+                loop: false,
+                items: 3
+            }
+        }
+    });
 
 //------------PARALLAX
     $(window).scroll(function () {
@@ -8,6 +30,15 @@ $( document ).ready(function() {
 //------------END PARALLAX
 
 
+//-------------- HOVER BUTTON
+    $(".table-container-footer .btn-pink").each(function (index, elem) {
+        var elemIndex = index + 2;
+        $(this).hover(function(){
+            $(".table-container-body tr td:nth-of-type(" + elemIndex + ")").css({"background-color": "rgb(160, 198, 216)",  "transition": "all 0.3s ease-in"});
+        },function(){
+            $(".table-container-body tr td:nth-of-type(" + elemIndex + ")").css({"background-color": "transparent",  "transition": "all 0.3s ease-in"});
+        });
+    });
 
 
 
