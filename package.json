@@ -28,6 +28,7 @@
   "dependencies": {
     "gulp-rimraf": "^0.2.1",
     "imagemin-pngquant": "^5.0.1",
-    "nunjucks": "^3.0.1"
+    "nunjucks": "^3.0.1",
+    "owl.carousel": "^2.2.0"
   }
 }

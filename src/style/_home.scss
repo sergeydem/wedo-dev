@@ -676,9 +676,13 @@ section {
         .icon {
           display: flex;
           justify-content: center;
+          max-width: 60px;
+          margin: 0 auto;
           img {
             filter: brightness(.5) grayscale(1);
             transition: all 1s ease;
+            width: 100%;
+            height: 100%;
           }
         }
         .text {
@@ -694,6 +698,13 @@ section {
           color: $blue;
           .icon img{
             filter: none;
+          }
+        }
+      }
+      &:nth-child(2){
+        .wrap-fact {
+          .icon {
+            max-width: 75px;
           }
         }
       }
