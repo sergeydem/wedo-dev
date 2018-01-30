@@ -83,54 +83,105 @@
                 <h2>{{descr_cost}}</h2>
             </div>
         </div>
-        <div class="row">
+        <div class="row d-block d-lg-none">
             <div class="col-12">
                 <div class="custom-tabs-mobile">
                     <!-- Nav tabs -->
                     <ul class="nav nav-tabs" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" data-toggle="tab" href="#home" role="tab">Первый</a>
+                            <a class="nav-link active" data-toggle="tab" href="{{ cards.head_tab.first_href }}" role="tab">{{ cards.head_tab.first_title }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#profile" role="tab">Средний</a>
+                            <a class="nav-link" data-toggle="tab" href="{{ cards.head_tab.second_href }}" role="tab">{{ cards.head_tab.second_title }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#messages" role="tab">Бизнес</a>
+                            <a class="nav-link" data-toggle="tab" href="{{ cards.head_tab.third_href }}" role="tab">{{ cards.head_tab.third_title }}</a>
                         </li>
                     </ul>
                     <!-- Tab panes -->
                     <div class="tab-content">
-                        <div class="tab-pane active" id="home" role="tabpanel">
+                        <div class="tab-pane active" id="{{ cards.head_tab.first_id }}" role="tabpanel">
                             <div class="price">
-                                <p>$2000</p>
+                                <p>{{ cards.first_content.price }}</p>
                             </div>
                             <ul>
-                                <li>sss</li>
-                                <li>sddddss</li>
-                                <li>sss</li>
-                                <li>fg</li>
-                                <li>fffsss</li>
-                                <li>sdsdkk34</li>
+                                <li><span>{{ cards.first_content.item1 }}</span></li>
+                                <li><span>{{ cards.first_content.item2 }}</span></li>
+                                <li><span>{{ cards.first_content.item3 }}</span></li>
+                                <li><span>{{ cards.first_content.item4 }}</span></li>
+                                <li><span>{{ cards.first_content.item5 }}</span></li>
+                                <li><span>{{ cards.first_content.item6 }}</span></li>
+                                <li><span>{{ cards.first_content.item7 }}</span></li>
+                                <li><span>{{ cards.first_content.item8 }}</span></li>
+                                <li><span>{{ cards.first_content.item9 }}</span></li>
+                                <li><span>{{ cards.first_content.item10 }}</span></li>
+                                <li><span>{{ cards.first_content.item11 }}</span></li>
+                                <li><span>{{ cards.first_content.item12 }}</span></li>
+                                <li><span>{{ cards.first_content.item13 }}</span></li>
                             </ul>
                             <div class="wrap-btn">
                                 <div class="button">
-                                    <a href="#" data-toggle="modal" data-target="#myModal" class="btn-pink"
+                                    <a href="#" class="btn-pink"
                                        data-wipe="{{ btn6 }}">{{ btn6 }}</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane" id="profile" role="tabpanel">
-
+                        <div class="tab-pane" id="{{ cards.head_tab.second_id }}" role="tabpanel">
+                            <div class="price">
+                                <p>{{ cards.second_content.price }}</p>
+                            </div>
+                            <ul>
+                                <li><span>{{ cards.second_content.item1 }}</span></li>
+                                <li><span>{{ cards.second_content.item2 }}</span></li>
+                                <li><span>{{ cards.second_content.item3 }}</span></li>
+                                <li><span>{{ cards.second_content.item4 }}</span></li>
+                                <li><span>{{ cards.second_content.item5 }}</span></li>
+                                <li><span>{{ cards.second_content.item6 }}</span></li>
+                                <li><span>{{ cards.second_content.item7 }}</span></li>
+                                <li><span>{{ cards.second_content.item8 }}</span></li>
+                                <li><span>{{ cards.second_content.item9 }}</span></li>
+                                <li><span>{{ cards.second_content.item10 }}</span></li>
+                                <li><span>{{ cards.second_content.item11 }}</span></li>
+                                <li><span>{{ cards.second_content.item12 }}</span></li>
+                            </ul>
+                            <div class="wrap-btn">
+                                <div class="button">
+                                    <a href="#" class="btn-pink"
+                                       data-wipe="{{ btn6 }}">{{ btn6 }}</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="tab-pane" id="messages" role="tabpanel">
-
+                        <div class="tab-pane" id="{{ cards.head_tab.third_id }}" role="tabpanel">
+                            <div class="price">
+                                <p>{{ cards.third_content.price }}</p>
+                            </div>
+                            <ul>
+                                <li><span>{{ cards.third_content.item1 }}</span></li>
+                                <li><span>{{ cards.third_content.item2 }}</span></li>
+                                <li><span>{{ cards.third_content.item3 }}</span></li>
+                                <li><span>{{ cards.third_content.item4 }}</span></li>
+                                <li><span>{{ cards.third_content.item5 }}</span></li>
+                                <li><span>{{ cards.third_content.item6 }}</span></li>
+                                <li><span>{{ cards.third_content.item7 }}</span></li>
+                                <li><span>{{ cards.third_content.item8 }}</span></li>
+                                <li><span>{{ cards.third_content.item9 }}</span></li>
+                                <li><span>{{ cards.third_content.item10 }}</span></li>
+                                <li><span>{{ cards.third_content.item11 }}</span></li>
+                                <li><span>{{ cards.third_content.item12 }}</span></li>
+                            </ul>
+                            <div class="wrap-btn">
+                                <div class="button">
+                                    <a href="#" class="btn-pink"
+                                       data-wipe="{{ btn6 }}">{{ btn6 }}</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
             </div>
         </div>
-        <div class="row">
+        <div class="row d-none d-lg-block">
             <div class="col-12">
                 <div class="table">
                     <div class="table-container">
@@ -205,7 +256,7 @@
                                         </div>
                                         <div class="wrap-btn">
                                             <div class="button">
-                                                <a href="#" data-toggle="modal" data-target="#myModal" class="btn-pink"
+                                                <a href="#" class="btn-pink"
                                                    data-wipe="{{ btn6 }}">{{ btn6 }}</a>
                                             </div>
                                         </div>
@@ -216,7 +267,7 @@
                                         </div>
                                         <div class="wrap-btn">
                                             <div class="button">
-                                                <a href="#" data-toggle="modal" data-target="#myModal" class="btn-pink"
+                                                <a href="#" class="btn-pink"
                                                    data-wipe="{{ btn6 }}">{{ btn6 }}</a>
                                             </div>
                                         </div>
@@ -227,7 +278,7 @@
                                         </div>
                                         <div class="wrap-btn">
                                             <div class="button">
-                                                <a href="#" data-toggle="modal" data-target="#myModal" class="btn-pink"
+                                                <a href="#" class="btn-pink"
                                                    data-wipe="{{ btn6 }}">{{ btn6 }}</a>
                                             </div>
                                         </div>

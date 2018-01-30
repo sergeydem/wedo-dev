@@ -145,6 +145,9 @@ header {
 /*------all section*/
 section {
   margin: 100px 0;
+  @include media-breakpoint-down(sm){
+    margin: 50px 0;
+  }
 }
 /*------END all section*/
 /*------all title and description sections*/
@@ -174,6 +177,9 @@ section {
 /*-------------------#feature*/
 #feature {
   margin-top: 100px;
+  @include media-breakpoint-down(sm){
+    margin-top: 70px;
+  }
 
   button,
   .button {
@@ -512,17 +518,52 @@ section {
       .nav-link {
         border-radius: 0;
         border: 1px solid $blue;
+        font-size: 16px;
+        color: $black;
+        transition: all 0.2s ease;
         &.active {
           border-color: $blue $blue $white;
+          color: $blue;
+          font-family: $OpenSansRegular;
         }
       }
-
     }
   }
   .tab-content {
     .tab-pane {
       border: 1px solid $blue;
       border-color: $white $blue $blue;
+      .price {
+        width: 100%;
+        p {
+          margin: 0;
+          text-align: center;
+          color: $blue;
+          font-size: 28px;
+          padding: 15px 0;
+          span {
+            font-size: 20px;
+          }
+        }
+      }
+      ul {
+        padding-left: 30px;
+        margin-bottom: 25px;
+        li {
+          font-size: 16px;
+          list-style-type: square;
+          padding: 5px 0;
+          line-height: 20px;
+          color: $blueLight;
+          span {
+            color: $black;
+            font-size: 14px;
+          }
+        }
+      }
+      .wrap-btn {
+        height: 75px;
+      }
     }
   }
 }
