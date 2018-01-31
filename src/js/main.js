@@ -238,7 +238,13 @@ $( document ).ready(function() {
 
     function updateTotalPriceandTime(totalPrice,totalTime){
         $('#totalPrice').html('$'+totalPrice);
-        $('#totalTime').html(totalTime+'Месяца');
+        var time = 'месяца' ;
+        if(totalTime == 1 ){
+            time = 'месяц';
+        }else if(totalTime>4){
+            time = 'месяцев' ;
+        }
+        $('#totalTime').html(totalTime+' '+time);
     }
 
 
