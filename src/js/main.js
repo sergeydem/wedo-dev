@@ -189,6 +189,7 @@ $( document ).ready(function() {
     //END TABLE---------------------------------------------------------
 
     // calculating total price and total time:
+    var checkBoxes =  $('input[type=checkbox]');
 
     var totalPrice;
     var basePrice    = 0 ;
@@ -201,24 +202,27 @@ $( document ).ready(function() {
     $('[id="light"]').click(function(){
         basePrice = allOptions.main.light.price;
         baseTime  = allOptions.main.light.time;
-        $('input[type=checkbox]').change();
+        checkBoxes.removeAttr('disabled');
+        checkBoxes.change();
     });
 
     $('[id="medium"]').click(function(){
         basePrice = allOptions.main.medium.price;
         baseTime  = allOptions.main.medium.time;
-        $('input[type=checkbox]').change();
+        checkBoxes.removeAttr('disabled');
+        checkBoxes.change();
     });
     $('[id="premium"]').click(function(){
         basePrice = allOptions.main.premium.price;
         baseTime  = allOptions.main.premium.time;
-        $('input[type=checkbox]').change();
+        checkBoxes.removeAttr('disabled');
+        checkBoxes.change();
     });
 
 
 
 
-    $('input[type=checkbox]').change(function() {
+    checkBoxes.change(function() {
         optionsPrice = 0;
         optionsTime = 0 ;
         $('input[type=checkbox]').each(function () {
