@@ -96,7 +96,7 @@ header {
       color: $blue;
     }
     button:hover {
-      cursor: pointer;;
+      cursor: pointer;
     }
     [data-wipe] {
       display: inline-block;
@@ -113,6 +113,10 @@ header {
         overflow: hidden;
         color: $white;
         background: $blue;
+        @include media-breakpoint-down(sm){
+          content: '';
+          background: transparent;
+        }
       }
       &:before {
         left: 0;
@@ -196,6 +200,7 @@ section {
     transition: all 0.3s;
     @include media-breakpoint-down(sm) {
       font-size: 14px;
+      margin: 5px 0;
       padding: 20px 0;
     }
     &:hover {
@@ -217,6 +222,9 @@ section {
     min-height: 0;
     transition: all 0.5s;
     margin: 50px 0;
+    @include media-breakpoint-down(sm){
+      margin: 40px 0;
+    }
 
     /* ---------------------- Tab */
 
@@ -241,6 +249,8 @@ section {
         text-align: right;
         @include media-breakpoint-down(md) {
           text-align: left;
+          border-left: 5px solid $blueLight;
+          padding-left: 5px;
         }
         &.active {
           color: $blue;
@@ -361,11 +371,11 @@ section {
       }
       .header-shadow {
         top: 80px;
-        box-shadow:0 2px 9px 2px rgba(104, 116, 122, 0.3);
+        box-shadow:0 2px 6px 2px rgba(171, 169, 169, 0.3);
       }
       .bottom-shadow {
         bottom: 130px;
-        box-shadow: 0 -2px 9px 2px  rgba(104, 116, 122, 0.3);
+        box-shadow: 0 -2px 6px 2px rgba(171, 169, 169, 0.3);
       }
       .table-container-header {
         overflow: hidden;
@@ -468,6 +478,9 @@ section {
   }
   /*----------Options*/
   .options {
+    @include media-breakpoint-down(sm){
+      margin: 10px 0 25px 0;
+    }
     .title-options {
       margin-bottom: 25px;
       p {
@@ -475,6 +488,9 @@ section {
         padding: 0;
         margin: 0;
         font-family: $OpenSansSemibold;
+        @include media-breakpoint-down(sm){
+          font-size: 18px;
+        }
       }
     }
     .checkbox-form {
@@ -502,21 +518,35 @@ section {
         font-family: $OpenSansRegular;
         font-size: 44px;
         color: $blue;
+        @include media-breakpoint-down(sm){
+          font-size: 38px;
+        }
       }
       p {
         font-size: 24px;
         margin: 0;
         text-align: center;
+        @include media-breakpoint-down(sm){
+          font-size: 20px;
+        }
       }
     }
   }
   .home-button {
     margin: 60px 0;
+    @include media-breakpoint-down(sm){
+      margin: 45px 0 70px 0;
+    }
     .wrap-btn {
       height: auto;
       .button {
         text-transform: uppercase;
         letter-spacing: 0.8px;
+        .btn-pink {
+          @include media-breakpoint-down(sm){
+            text-align: center;
+          }
+        }
       }
     }
   }
@@ -524,6 +554,9 @@ section {
 /*-------------tabs*/
 
 .custom-tabs-mobile {
+  @include media-breakpoint-down(sm){
+    margin: 35px 0 30px 0;
+  }
   .nav {
     flex-wrap: nowrap;
   }
@@ -597,6 +630,9 @@ section {
   padding-left: 35px;
   cursor: pointer;
   margin-bottom: 20px;
+  @include media-breakpoint-down(sm){
+    font-size: 14px;
+  }
 
   input {
     position: absolute;
@@ -690,12 +726,34 @@ section {
       justify-content: center;
       min-width: 200px;
       margin-bottom: 40px;
+      @include media-breakpoint-down(sm) {
+        justify-content: flex-start;
+        margin-bottom: 50px;
+        &:nth-child(2){
+          .wrap-fact {
+            flex-direction: row-reverse;
+          }
+        }
+        &:nth-child(5){
+          .wrap-fact {
+            flex-direction: row-reverse;
+          }
+        }
+      }
       .wrap-fact {
+        @include media-breakpoint-down(sm){
+          display: flex;
+          align-items: center;
+
+        }
         .icon {
           display: flex;
           justify-content: center;
           max-width: 60px;
           margin: 0 auto;
+          @include media-breakpoint-down(sm){
+            max-width: 40px;
+          }
           img {
             filter: brightness(.5) grayscale(1);
             transition: all 1s ease;
@@ -709,6 +767,13 @@ section {
             text-align: center;
             max-width: 200px;
             margin: 15px 0 0 0;
+            @include media-breakpoint-down(sm) {
+              font-size: 15px;
+              //text-align: left;
+              padding: 0 7px;
+              margin: 0;
+              line-height: 20px;
+            }
           }
         }
         &:hover {
@@ -723,6 +788,9 @@ section {
         .wrap-fact {
           .icon {
             max-width: 75px;
+            @include media-breakpoint-down(sm){
+              max-width: 55px;
+            }
           }
         }
       }
@@ -740,6 +808,9 @@ section {
     .card-wrap {
       display: flex;
       justify-content: center;
+      @include media-breakpoint-down(sm){
+        margin-top: 25px;
+      }
       .card {
         border: 1px solid $blue;
         border-radius: 0;
@@ -753,6 +824,12 @@ section {
         &:hover {
           cursor: pointer;
           margin-top: 70px;
+          @include media-breakpoint-down(sm) {
+            margin-top: 0;
+          }
+        }
+        @include media-breakpoint-down(sm){
+          margin-top: 0;
         }
         .title-card {
           font-size: 60px;
@@ -769,6 +846,29 @@ section {
       }
     }
   }
+//owl dot
+  .owl-dot {
+    background: $white;
+    height: 12px;
+    width: 12px;
+    border-radius: 10px;
+    border: 1px solid $blue;
+    margin: 0 3px;
+  }
+  .owl-dot.active {
+    background: $blue;
+    height: 12px;
+    width: 12px;
+    border-radius: 10px;
+    border: 1px solid $blue;
+  }
+  .owl-dots {
+    display: flex;
+    height: 20px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
 }
 
 /*------------------END #promotion*/
@@ -1012,21 +1112,4 @@ footer {
   padding: 5px 10px;
 }
 
-.owl-dot {
-  background: red;
-  height: 20px;
-  width: 20px;
-  border-radius: 10px;
-}
-.owl-dot.active {
-  background: purple;
-  height: 20px;
-  width: 20px;
-  border-radius: 10px;
-}
-.owl-dots {
-  display: flex;
-  height: 20px;
-  justify-content: center;
-}
 /*-------------END  Modal window, forms------------------*/
