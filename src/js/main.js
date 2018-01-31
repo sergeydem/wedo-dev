@@ -198,20 +198,20 @@ $( document ).ready(function() {
     var baseTime    = 0 ;
     var optionsTime = 0 ;
 
-    $('#light').click(function(){
-        basePrice = prices.mainPrices.light ;
-        baseTime  = times.mainTimes.light ;
+    $('[id="light"]').click(function(){
+        basePrice = allOptions.main.light.price;
+        baseTime  = allOptions.main.light.time;
         $('input[type=checkbox]').change();
     });
 
-    $('#medium').click(function(){
-        basePrice = prices.mainPrices.medium  ;
-        baseTime  = times.mainTimes.medium ;
+    $('[id="medium"]').click(function(){
+        basePrice = allOptions.main.medium.price;
+        baseTime  = allOptions.main.medium.time;
         $('input[type=checkbox]').change();
     });
-    $('#premium').click(function(){
-        basePrice = prices.mainPrices.premium  ;
-        baseTime  = times.mainTimes.premium ;
+    $('[id="premium"]').click(function(){
+        basePrice = allOptions.main.premium.price;
+        baseTime  = allOptions.main.premium.time;
         $('input[type=checkbox]').change();
     });
 
@@ -223,8 +223,8 @@ $( document ).ready(function() {
         optionsTime = 0 ;
         $('input[type=checkbox]').each(function () {
             if (this.checked) {
-                optionsPrice += prices['optionsPrices'][this.id];
-                optionsTime  += times['optionsTimes'][this.id];
+                optionsPrice += allOptions['options'][this.id]['price'];
+                optionsTime  += allOptions['options'][this.id]['time']
             }
         });
 

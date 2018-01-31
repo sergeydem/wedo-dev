@@ -110,8 +110,8 @@
                                 {% endfor %}
                             </ul>
                             <div class="wrap-btn">
-                                <div class="button">
-                                    <a href="#" class="btn-pink"
+                                <div class="button" id="light">
+                                    <a href="javascript:void(0)" class="btn-pink"
                                        data-wipe="{{ btn6 }}">{{ btn6 }}</a>
                                 </div>
                             </div>
@@ -126,8 +126,8 @@
                                 {% endfor %}
                             </ul>
                             <div class="wrap-btn">
-                                <div class="button">
-                                    <a href="#" class="btn-pink"
+                                <div class="button" id="medium">
+                                    <a href="javascript:void(0)" class="btn-pink"
                                        data-wipe="{{ btn6 }}">{{ btn6 }}</a>
                                 </div>
                             </div>
@@ -142,8 +142,8 @@
                                 {% endfor %}
                             </ul>
                             <div class="wrap-btn">
-                                <div class="button">
-                                    <a href="#" class="btn-pink"
+                                <div class="button" id="premium">
+                                    <a href="javascript:void(0)" class="btn-pink"
                                        data-wipe="{{ btn6 }}">{{ btn6 }}</a>
                                 </div>
                             </div>
