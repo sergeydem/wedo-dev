@@ -229,8 +229,8 @@
                                             {{ table.footer.first }}
                                         </div>
                                         <div class="wrap-btn">
-                                            <div class="button">
-                                                <a href="#" class="btn-pink"
+                                            <div class="button" id="light">
+                                                <a href="javascript:void(0)" class="btn-pink"
                                                    data-wipe="{{ btn6 }}">{{ btn6 }}</a>
                                             </div>
                                         </div>
@@ -240,8 +240,8 @@
                                             {{ table.footer.second }}
                                         </div>
                                         <div class="wrap-btn">
-                                            <div class="button">
-                                                <a href="#" class="btn-pink"
+                                            <div class="button" id="medium">
+                                                <a href="javascript:void(0)" class="btn-pink"
                                                    data-wipe="{{ btn6 }}">{{ btn6 }}</a>
                                             </div>
                                         </div>
@@ -251,8 +251,8 @@
                                             {{ table.footer.third }}
                                         </div>
                                         <div class="wrap-btn">
-                                            <div class="button">
-                                                <a href="#" class="btn-pink"
+                                            <div class="button" id="premium">
+                                                <a href="javascript:void(0)" class="btn-pink"
                                                    data-wipe="{{ btn6 }}">{{ btn6 }}</a>
                                             </div>
                                         </div>
@@ -288,11 +288,11 @@
                     <div class="cost">
                         <div class="price">
                             <p>{{ title_total_cost }}</p>
-                            <div class="total-price">$3100</div>
+                            <div class="total-price" id="totalPrice">$0</div>
                         </div>
                         <div class="time">
                             <p>{{ title_total_time }}</p>
-                            <div class="total-time">3 месяца</div>
+                            <div class="total-time" id="totalTime">0</div>
                         </div>
                     </div>
                 </div>
@@ -470,6 +470,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="js/owl.carousel.min.js"></script>
+<script src="js/config.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
