@@ -188,6 +188,68 @@ $( document ).ready(function() {
 
     //END TABLE---------------------------------------------------------
 
+    // calculating total price and total time:
+
+    var totalPrice;
+    var basePrice    = 0 ;
+    var optionsPrice = 0 ;
+
+    var totalTime;
+    var baseTime    = 0 ;
+    var optionsTime = 0 ;
+
+    $('#light').click(function(){
+        basePrice = prices.mainPrices.light ;
+        baseTime  = times.mainTimes.light ;
+        $('input[type=checkbox]').change();
+    });
+
+    $('#medium').click(function(){
+        basePrice = prices.mainPrices.medium  ;
+        baseTime  = times.mainTimes.medium ;
+        $('input[type=checkbox]').change();
+    });
+    $('#premium').click(function(){
+        basePrice = prices.mainPrices.premium  ;
+        baseTime  = times.mainTimes.premium ;
+        $('input[type=checkbox]').change();
+    });
+
+
+
+
+    $('input[type=checkbox]').change(function() {
+        optionsPrice = 0;
+        optionsTime = 0 ;
+        $('input[type=checkbox]').each(function () {
+            if (this.checked) {
+                optionsPrice += prices['optionsPrices'][this.id];
+                optionsTime  += times['optionsTimes'][this.id];
+            }
+        });
+
+        totalPrice = parseInt(basePrice) + parseInt(optionsPrice) ;
+        totalTime  = parseInt(baseTime)  + parseInt(optionsTime)  ;
+
+        updateTotalPriceandTime(totalPrice,totalTime);
+    });
+
+
+
+    function updateTotalPriceandTime(totalPrice,totalTime){
+        $('#totalPrice').html('$'+totalPrice);
+        var time = 'месяца' ;
+        if(totalTime == 1 ){
+            time = 'месяц';
+        }else if(totalTime>4){
+            time = 'месяцев' ;
+        }
+        $('#totalTime').html(totalTime+' '+time);
+    }
+
+
+
+
 
     /*Animation*/
     $("#cost, #feature, #why-us, #promotion").animated("slideInUp", "slideOutUp");
