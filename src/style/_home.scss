@@ -331,6 +331,9 @@ section {
     colgroup {
       col:nth-child(1){
         width: 600px;
+        @include media-breakpoint-between(md, lg){
+          width: 460px;
+        }
       }
       col:nth-child(2){
         width: 150px;
@@ -727,7 +730,7 @@ section {
       min-width: 200px;
       margin-bottom: 40px;
       @include media-breakpoint-down(sm) {
-        justify-content: flex-start;
+        justify-content: center;
         margin-bottom: 50px;
         &:nth-child(2){
           .wrap-fact {
@@ -984,6 +987,34 @@ footer {
   }
 }
 
+#myModal3 {
+  .modal-body {
+    #callback-form {
+      .wrap-input {
+        display: flex;
+        @include media-breakpoint-down(sm){
+          flex-direction: column;
+        }
+      }
+      .summary-output {
+        margin-bottom: 50px;
+        margin-left: 30px;
+        .tariff-plan, .additional-options, .date, .cost {
+          display: flex;
+          margin: 15px 0;
+          .title {
+            margin-right: 15px;
+          }
+          .value {
+            color: $blue;
+            font-family: $OpenSansRegular;
+          }
+        }
+      }
+    }
+  }
+}
+
 .modal-open {
   padding-right: 0px !important;
 }
@@ -1018,7 +1049,7 @@ footer {
     position: relative;
     margin: 0 35px 40px;
 
-    input, .selectric {
+    input, textarea {
       outline: none;
       z-index: 1;
       position: relative;
@@ -1034,7 +1065,7 @@ footer {
       &:focus {
         ~ label {
           color: $gray;
-          transform: translate(-12%, -50%) scale(0.75);
+         // transform: translate(-12%, -50%) scale(0.75);
         }
 
         ~ .bar {
@@ -1052,13 +1083,21 @@ footer {
         }
       }
     }
+    textarea {
+      margin-top: 10px;
+    }
+
+    .form-control:focus {
+      box-shadow: none;
+    }
 
     label {
       position: absolute;
       top: 0;
       left: 0;
-      color: $black;
+      color: $gray;
       font-size: 14px;
+      transform: translate(-12%, -50%) scale(0.75);
       @include media-breakpoint-up(sm) {
         font-size: 18px;
       }
@@ -1078,7 +1117,7 @@ footer {
       &:after {
         content: '';
         position: absolute;
-        background: $pink;
+        background: $blue;
         width: 0;
         height: 3px;
         transition: .2s ease;
@@ -1091,6 +1130,13 @@ footer {
       &:after {
         right: 50%;
       }
+    }
+    textarea::-webkit-scrollbar {
+      width: 4px;
+      background-color: $blueLight;
+    }
+    textarea::-webkit-scrollbar-thumb {
+      background-color: $blue;
     }
   }
   .button-container {

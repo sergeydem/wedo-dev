@@ -302,7 +302,7 @@
             <div class="col-12">
                 <div class="wrap-btn">
                     <div class="button">
-                        <a href="#" data-toggle="modal" data-target="#myModal" class="btn-pink"
+                        <a href="#" data-toggle="modal" data-target="#myModal3" class="btn-pink"
                            data-wipe="{{ btn2 }}">{{ btn2 }}</a>
                     </div>
                 </div>
@@ -422,12 +422,8 @@
                                         </div>
                                         <div id="errorMessage" style="display: none">{{ error_mes }}</div>
                                         <div class="input-container">
-                                            <select class="form-control" id="select" name="select" required>
-                                                <option value="" disabled selected>{{ select_title }}</option>
-                                                <option value="{{ select_item1 }}">{{ select_item1 }}</option>
-                                                <option value="{{ select_item2 }}">{{ select_item2 }}</option>
-                                                <option value="{{ select_item3 }}">{{ select_item3 }}</option>
-                                            </select>
+                                            <textarea id="comment" name="comment"></textarea>
+                                            <label for="comment">{{ textarea_comment }}</label>
                                             <div class="bar"></div>
                                         </div>
                                         <div class="button-container">
@@ -448,6 +444,81 @@
             </div>
         </div>
     </div>
+<div class="modal fade" id="myModal3">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row justify-content-end">
+                    <div class="col-2 justify-content-end">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <img src="{{path}}img/close.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-10">
+                        <h3 class="modal-title" id="exampleModalLabel">{{ form_title }}</h3>
+                    </div>
+                </div>
+                <div id="hidden-row" class="row">
+                    <div class="modal-body">
+                        <div class="container1">
+                            <div class="card">
+                                <form id="callback-form">
+                                    <div class="summary-output">
+                                        <div class="tariff-plan">
+                                            <div class="title">{{ tariff_plan }}:</div>
+                                            <div class="value">Бизнес</div>
+                                            <input id="input-tariff" name="tariff" type="hidden" value="">
+                                        </div>
+                                        <div class="additional-options">
+                                            <div class="title">{{ additional_options }}:</div>
+                                            <div class="value">-</div>
+                                            <input id="input-options" name="options" type="hidden" value="">
+                                        </div>
+                                        <div class="date">
+                                            <div class="title">{{ title_total_time }}:</div>
+                                            <div class="value">-</div>
+                                            <input id="input-date" name="date" type="hidden" value="">
+                                        </div>
+                                        <div class="cost">
+                                            <div class="title">{{ title_total_cost }}:</div>
+                                            <div class="value">-</div>
+                                            <input id="input-cost" name="cost" type="hidden" value="">
+                                        </div>
+                                    </div>
+                                    <div class="wrap-input">
+                                    <div class="input-container">
+                                        <input type="text" id="Username" name="Username" required>
+                                        <label for="Username">{{ input_name }}</label>
+                                        <div class="bar"></div>
+                                    </div>
+                                    <div class="input-container number">
+                                        <input class="form-control bfh-phone" type="text" id="Phone" value=""
+                                               name="Phone" data-format="+380 (dd) ddd-dd-dd" required>
+                                        <label for="Phone">{{ input_phone }}</label>
+                                        <div class="bar"></div>
+                                    </div>
+                                    <div id="errorMessage" style="display: none">{{ error_mes }}</div>
+                                    </div>
+                                    <div class="button-container">
+                                        <div class="wrap-btn">
+                                            <div class="button">
+                                                <button type="submit" class="btn"
+                                                        data-wipe="{{ btn4 }}">{{ btn4 }}</button>
+                                                <!--<a href="" id="submit-btn" class="btn-pink" data-wipe="Отправить заявку">Отправить заявку</a>-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
          aria-hidden="true">
         <div class="modal-dialog" role="document">
