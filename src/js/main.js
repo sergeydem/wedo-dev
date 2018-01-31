@@ -1,5 +1,4 @@
 $( document ).ready(function() {
-
 //------------OWL
     $('.owl-carousel').owlCarousel({
         nav: false,
@@ -57,7 +56,7 @@ $( document ).ready(function() {
 
         if(!$(this).hasClass('active')) {
             $(this).add(content).add(activeItems).toggleClass('active');
-            wrapper.css('min-height', content.outerHeight());
+            wrapper.css('min-height', '400px' );
         }
     };
 
@@ -187,6 +186,20 @@ $( document ).ready(function() {
     redraw();
 
     //END TABLE---------------------------------------------------------
+
+// Insert price into labels
+    var masPrice = [
+        {price: prices.mainPrices.light},
+        {price: prices.mainPrices.medium},
+        {price: prices.mainPrices.premium}
+    ];
+
+    $(".table-container-footer .price").each(function (index) {
+        $(this).text('$'+ masPrice[index].price);
+    });
+    $(".tab-content .price").each(function (index) {
+        $(this).find('p').text('$'+ masPrice[index].price);
+    });
 
     // calculating total price and total time:
 
