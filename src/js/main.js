@@ -189,9 +189,9 @@ $( document ).ready(function() {
 
 // Insert price into labels
     var masPrice = [
-        {price: prices.mainPrices.light},
-        {price: prices.mainPrices.medium},
-        {price: prices.mainPrices.premium}
+        {price: allOptions.main.light.price},
+        {price: allOptions.main.medium.price},
+        {price: allOptions.main.premium.price}
     ];
 
     $(".table-container-footer .price").each(function (index) {
