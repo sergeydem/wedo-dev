@@ -17,7 +17,10 @@ $( document ).ready(function() {
                 dots: false,
                 margin: 10,
                 loop: false,
-                items: 3
+                items: 3,
+                mouseDrag: false,
+                touchDrag: false,
+                pullDrag: false
             }
         }
     });

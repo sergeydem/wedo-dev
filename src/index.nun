@@ -374,7 +374,7 @@
         <div class="row items justify-content-center align-items-center no-gutters">
             <div class="col-12 col-md-12 col-xl-12 item justify-content-center align-items-center">
                 <div class="logo-footer">
-                    <a href=""><img src="../img/logo.png" alt="WeDo"></a>
+                    <a href=""><img src="img/logo.png" alt="WeDo"></a>
                     <div class="footer-phone">
                         <a href="{{ phone1_href }}">{{ phone1 }}</a>
                         <a href="{{ phone2_href }}">{{ phone2 }}</a>

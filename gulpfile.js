@@ -112,7 +112,7 @@ gulp.task('style:build', function () {
         }).on('error',function (error) {
             console.log(error.toString())
         }))
-        .pipe(prefixer())
+        .pipe(prefixer({browsers: ['last 2 versions'], cascade: false}))
         .pipe(cssmin())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.css))

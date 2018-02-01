@@ -94,27 +94,27 @@
   "fact": [
     {
       "text_fact":"Партнёр Google, Bitrix, Shopify",
-      "img":"../img/icon1.png",
+      "img":"img/icon1.png",
       "img_alt":"Партнеры"
     },
     {
       "text_fact":"Все сотрудники проходили обучение в Bitrix, Google, 1С",
-      "img":"../img/icon2.png",
+      "img":"img/icon2.png",
       "img_alt":"Обучение сотрудников"
     },
     {
       "text_fact":"Опыт работы в сфере IT (1С, web) с 2008 года",
-      "img":"../img/icon3.png",
+      "img":"img/icon3.png",
       "img_alt":"Опыт работы"
     },
     {
       "text_fact":"Полный цикл Разработка - Интеграция - Поддержка - Продвижение",
-      "img":"../img/icon4.png",
+      "img":"img/icon4.png",
       "img_alt":"Полный цикл"
     },
     {
       "text_fact":"Более 100 успешных проектов в 1С и web",
-      "img":"../img/icon5.png",
+      "img":"img/icon5.png",
       "img_alt":"Успешные проекты"
     }
   ],
