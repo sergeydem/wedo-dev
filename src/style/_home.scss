@@ -46,10 +46,12 @@ header {
         @include media-breakpoint-down(sm) {
           flex-direction: column;
         }
-        p {
+        a {
           margin: 0;
           padding-left: 30px;
           letter-spacing: 1px;
+          text-decoration: none;
+          color: $white;
           @include media-breakpoint-down(sm){
             font-size: 10px;
             padding-left: 0;

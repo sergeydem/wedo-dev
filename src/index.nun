@@ -27,8 +27,8 @@
             </div>
             <div class="col-6 col-md-7 item">
                 <div class="phone">
-                    <p>{{ phone1 }}</p>
-                    <p>{{ phone2 }}</p>
+                    <a href="{{ phone1_href }}">{{ phone1 }}</a>
+                    <a href="{{ phone2_href }}">{{ phone2 }}</a>
                 </div>
             </div>
         </div>
