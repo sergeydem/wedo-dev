@@ -422,12 +422,8 @@
                                         </div>
                                         <div id="errorMessage" style="display: none">{{ error_mes }}</div>
                                         <div class="input-container">
-                                            <select class="form-control" id="select" name="select" required>
-                                                <option value="" disabled selected>{{ select_title }}</option>
-                                                <option value="{{ select_item1 }}">{{ select_item1 }}</option>
-                                                <option value="{{ select_item2 }}">{{ select_item2 }}</option>
-                                                <option value="{{ select_item3 }}">{{ select_item3 }}</option>
-                                            </select>
+                                            <label for="comment">{{ textarea_comment }}</label>
+                                            <textarea id="comment" name="comment"></textarea>
                                             <div class="bar"></div>
                                         </div>
                                         <div class="button-container">
