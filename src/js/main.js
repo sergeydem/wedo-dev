@@ -270,6 +270,7 @@ $( document ).ready(function() {
 
     /*Animation*/
     $("#cost, #feature, #why-us, #promotion").animated("slideInUp", "slideOutUp");
+    $(".options, .wrap-cost, .home-button").animated("slideInUp", "slideOutUp");
 
 
 });
