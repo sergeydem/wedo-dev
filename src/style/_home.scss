@@ -89,6 +89,14 @@ header {
       font-size: 14px;
       border-radius: 0;
       outline: none;
+      &:hover { 
+        background: $blue;
+        color: $white;
+      }
+      &:active {
+        background: $blue;
+        color: $white;
+      }
       @include media-breakpoint-up(sm){
         font-size: 18px;
         padding: 14px 18px;
@@ -278,7 +286,7 @@ section {
         max-height: none;
         position: absolute;
         right: 0;
-        top: 50%;
+        top: 40%;
         opacity: 0;
         padding: 0rem 2rem 2rem 2rem;
         transform: translateX(100%);
@@ -295,6 +303,7 @@ section {
         font-size: 30px;
         color: $blue;
         font-family: $OpenSansSemibold;
+        line-height: 35px;
         @include media-breakpoint-down(sm) {
           font-size: 14px;
         }
