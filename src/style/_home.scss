@@ -1,5 +1,8 @@
 
 /*------------BEGIN header----------------*/
+.clicked {
+  background-color: rgba(68,125,152,.07) !important;
+}
 
 header {
   height: 100vh;
@@ -9,6 +12,9 @@ header {
   //background-position: top;
   background-position: 50% 0;
   background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
   background-color: rgba(3, 6, 8, 0.85);
@@ -739,7 +745,7 @@ section {
     .item-fact {
       display: flex;
       justify-content: center;
-      min-width: 200px;
+      min-width: 300px;
       margin-bottom: 40px;
       @include media-breakpoint-down(sm) {
         justify-content: center;

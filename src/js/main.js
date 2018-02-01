@@ -35,12 +35,20 @@ $( document ).ready(function() {
 //-------------- HOVER BUTTON
     $(".table-container-footer .btn-pink").each(function (index, elem) {
         var elemIndex = index + 2;
-        $(this).hover(function(){
+        var _this = $(this);
+        _this.hover(function(){
             $(".table-container-body tr td:nth-of-type(" + elemIndex + ")").css({"background-color": "rgba(68,125,152,.07)",  "transition": "all 0.3s ease-in"});
         },function(){
             $(".table-container-body tr td:nth-of-type(" + elemIndex + ")").css({"background-color": "transparent",  "transition": "all 0.3s ease-in"});
+        }).click(function () {
+            $(".table-container-body tr td").each(function () {
+               if ($(this).hasClass( "clicked" )) $(this).removeClass("clicked")
+            });
+
+            $(".table-container-body tr td:nth-of-type(" + elemIndex + ")").addClass("clicked");
         });
     });
+
 
 
 
