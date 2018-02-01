@@ -110,8 +110,8 @@
                                 {% endfor %}
                             </ul>
                             <div class="wrap-btn">
-                                <div class="button">
-                                    <a href="#" class="btn-pink"
+                                <div class="button" id="light">
+                                    <a href="javascript:void(0)" class="btn-pink"
                                        data-wipe="{{ btn6 }}">{{ btn6 }}</a>
                                 </div>
                             </div>
@@ -126,8 +126,8 @@
                                 {% endfor %}
                             </ul>
                             <div class="wrap-btn">
-                                <div class="button">
-                                    <a href="#" class="btn-pink"
+                                <div class="button" id="medium">
+                                    <a href="javascript:void(0)" class="btn-pink"
                                        data-wipe="{{ btn6 }}">{{ btn6 }}</a>
                                 </div>
                             </div>
@@ -142,8 +142,8 @@
                                 {% endfor %}
                             </ul>
                             <div class="wrap-btn">
-                                <div class="button">
-                                    <a href="#" class="btn-pink"
+                                <div class="button" id="premium">
+                                    <a href="javascript:void(0)" class="btn-pink"
                                        data-wipe="{{ btn6 }}">{{ btn6 }}</a>
                                 </div>
                             </div>
@@ -276,7 +276,7 @@
                         <label for="{{ item.for }}" class="c-custom-check" data-toggle="tooltip" data-placement="top" data-html="true"
                                title="{{ item.tooltip }}">
                             {{ item.label_option }}
-                            <input required type="checkbox" id="{{ item.id }}">
+                            <input required disabled type="checkbox" id="{{ item.id }}">
                             <div class="c-custom-check__indicator"></div>
                         </label>
                         {% endfor %}

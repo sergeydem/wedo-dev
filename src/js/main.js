@@ -189,9 +189,9 @@ $( document ).ready(function() {
 
 // Insert price into labels
     var masPrice = [
-        {price: prices.mainPrices.light},
-        {price: prices.mainPrices.medium},
-        {price: prices.mainPrices.premium}
+        {price: allOptions.main.light.price},
+        {price: allOptions.main.medium.price},
+        {price: allOptions.main.premium.price}
     ];
 
     $(".table-container-footer .price").each(function (index) {
@@ -202,6 +202,7 @@ $( document ).ready(function() {
     });
 
     // calculating total price and total time:
+    var checkBoxes =  $('input[type=checkbox]');
 
     var totalPrice;
     var basePrice    = 0 ;
@@ -211,33 +212,36 @@ $( document ).ready(function() {
     var baseTime    = 0 ;
     var optionsTime = 0 ;
 
-    $('#light').click(function(){
-        basePrice = prices.mainPrices.light ;
-        baseTime  = times.mainTimes.light ;
-        $('input[type=checkbox]').change();
+    $('[id="light"]').click(function(){
+        basePrice = allOptions.main.light.price;
+        baseTime  = allOptions.main.light.time;
+        checkBoxes.removeAttr('disabled');
+        checkBoxes.change();
     });
 
-    $('#medium').click(function(){
-        basePrice = prices.mainPrices.medium  ;
-        baseTime  = times.mainTimes.medium ;
-        $('input[type=checkbox]').change();
+    $('[id="medium"]').click(function(){
+        basePrice = allOptions.main.medium.price;
+        baseTime  = allOptions.main.medium.time;
+        checkBoxes.removeAttr('disabled');
+        checkBoxes.change();
     });
-    $('#premium').click(function(){
-        basePrice = prices.mainPrices.premium  ;
-        baseTime  = times.mainTimes.premium ;
-        $('input[type=checkbox]').change();
+    $('[id="premium"]').click(function(){
+        basePrice = allOptions.main.premium.price;
+        baseTime  = allOptions.main.premium.time;
+        checkBoxes.removeAttr('disabled');
+        checkBoxes.change();
     });
 
 
 
 
-    $('input[type=checkbox]').change(function() {
+    checkBoxes.change(function() {
         optionsPrice = 0;
         optionsTime = 0 ;
         $('input[type=checkbox]').each(function () {
             if (this.checked) {
-                optionsPrice += prices['optionsPrices'][this.id];
-                optionsTime  += times['optionsTimes'][this.id];
+                optionsPrice += allOptions['options'][this.id]['price'];
+                optionsTime  += allOptions['options'][this.id]['time']
             }
         });
 
