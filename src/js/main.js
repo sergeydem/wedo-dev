@@ -300,8 +300,7 @@ $( document ).ready(function() {
     function updateFormOptions(options){
         var arrValues = Object.values(options);
         var additionalOptions =  $('#additionalOptions');
-        additionalOptions.html('- ');
-        additionalOptions.append(arrValues.join('<br/>- '));
+        additionalOptions.append(arrValues.join(';'));
 
         // options input value :
         $('#input-options').val(arrValues);
