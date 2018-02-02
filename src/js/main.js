@@ -204,31 +204,28 @@ $( document ).ready(function() {
     // calculating total price and total time:
     var checkBoxes =  $('input[type=checkbox]');
 
-    var totalPrice;
-    var basePrice    = 0 ;
+    var totalPrice ;
+    var basePrice    = allOptions.main.light.price ;
     var optionsPrice = 0 ;
 
     var totalTime;
-    var baseTime    = 0 ;
+    var baseTime    = allOptions.main.light.time  ;
     var optionsTime = 0 ;
 
     $('[id="light"]').click(function(){
         basePrice = allOptions.main.light.price;
         baseTime  = allOptions.main.light.time;
-        checkBoxes.removeAttr('disabled');
         checkBoxes.change();
     });
 
     $('[id="medium"]').click(function(){
         basePrice = allOptions.main.medium.price;
         baseTime  = allOptions.main.medium.time;
-        checkBoxes.removeAttr('disabled');
         checkBoxes.change();
     });
     $('[id="premium"]').click(function(){
         basePrice = allOptions.main.premium.price;
         baseTime  = allOptions.main.premium.time;
-        checkBoxes.removeAttr('disabled');
         checkBoxes.change();
     });
 

@@ -276,7 +276,7 @@
                         <label for="{{ item.for }}" class="c-custom-check" data-toggle="tooltip" data-placement="top" data-html="true"
                                title="{{ item.tooltip }}">
                             {{ item.label_option }}
-                            <input required disabled type="checkbox" id="{{ item.id }}">
+                            <input required type="checkbox" id="{{ item.id }}">
                             <div class="c-custom-check__indicator"></div>
                         </label>
                         {% endfor %}
@@ -288,11 +288,11 @@
                     <div class="cost">
                         <div class="price">
                             <p>{{ title_total_cost }}</p>
-                            <div class="total-price" id="totalPrice">$0</div>
+                            <div class="total-price" id="totalPrice">$2000</div>
                         </div>
                         <div class="time">
                             <p>{{ title_total_time }}</p>
-                            <div class="total-time" id="totalTime">0</div>
+                            <div class="total-time" id="totalTime">1 месяц</div>
                         </div>
                     </div>
                 </div>
