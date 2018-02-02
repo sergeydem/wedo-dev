@@ -1,5 +1,8 @@
 
 /*------------BEGIN header----------------*/
+.clicked {
+  background-color: rgba(68,125,152,.07) !important;
+}
 
 header {
   height: 100vh;
@@ -9,6 +12,9 @@ header {
   //background-position: top;
   background-position: 50% 0;
   background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
   background-color: rgba(3, 6, 8, 0.85);
@@ -46,10 +52,12 @@ header {
         @include media-breakpoint-down(sm) {
           flex-direction: column;
         }
-        p {
+        a {
           margin: 0;
           padding-left: 30px;
           letter-spacing: 1px;
+          text-decoration: none;
+          color: $white;
           @include media-breakpoint-down(sm){
             font-size: 10px;
             padding-left: 0;
@@ -87,6 +95,14 @@ header {
       font-size: 14px;
       border-radius: 0;
       outline: none;
+      //&:hover {
+      //  background: $blue;
+      //  color: $white;
+      //}
+      &:active {
+        background: $blue;
+        color: $white;
+      }
       @include media-breakpoint-up(sm){
         font-size: 18px;
         padding: 14px 18px;
@@ -198,7 +214,7 @@ section {
     font-size: 18px;
     text-align: center;
     transition: all 0.3s;
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       font-size: 14px;
       margin: 5px 0;
       padding: 20px 0;
@@ -222,7 +238,7 @@ section {
     min-height: 0;
     transition: all 0.5s;
     margin: 50px 0;
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(md){
       margin: 40px 0;
     }
 
@@ -276,7 +292,7 @@ section {
         max-height: none;
         position: absolute;
         right: 0;
-        top: 50%;
+        top: 40%;
         opacity: 0;
         padding: 0rem 2rem 2rem 2rem;
         transform: translateX(100%);
@@ -293,6 +309,7 @@ section {
         font-size: 30px;
         color: $blue;
         font-family: $OpenSansSemibold;
+        line-height: 35px;
         @include media-breakpoint-down(sm) {
           font-size: 14px;
         }
@@ -481,7 +498,7 @@ section {
   }
   /*----------Options*/
   .options {
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(md){
       margin: 10px 0 25px 0;
     }
     .title-options {
@@ -558,7 +575,7 @@ section {
 /*-------------tabs*/
 
 .custom-tabs-mobile {
-  @include media-breakpoint-down(sm){
+  @include media-breakpoint-down(md){
     margin: 35px 0 30px 0;
   }
   .nav {
@@ -728,7 +745,7 @@ section {
     .item-fact {
       display: flex;
       justify-content: center;
-      min-width: 200px;
+      min-width: 300px;
       margin-bottom: 40px;
       @include media-breakpoint-down(sm) {
         justify-content: center;
@@ -771,7 +788,6 @@ section {
           }
         }
         &:hover {
-          cursor: pointer;
           color: $blue;
           .icon img{
             filter: none;
@@ -802,7 +818,7 @@ section {
     .card-wrap {
       display: flex;
       justify-content: center;
-      @include media-breakpoint-down(sm){
+      @include media-breakpoint-down(md){
         margin-top: 25px;
       }
       .card {
@@ -811,18 +827,19 @@ section {
         margin-top: 80px;
         transition: all 0.5s ease;
         max-width: 275px;
-        min-height: 330px;
+        min-height: 331px;
         padding: 0;
         display: flex;
         justify-content: center;
+        margin-bottom: 5px;
         &:hover {
           cursor: pointer;
           margin-top: 70px;
-          @include media-breakpoint-down(sm) {
+          @include media-breakpoint-down(md) {
             margin-top: 0;
           }
         }
-        @include media-breakpoint-down(sm){
+        @include media-breakpoint-down(md){
           margin-top: 0;
         }
         .title-card {

@@ -27,8 +27,8 @@
             </div>
             <div class="col-6 col-md-7 item">
                 <div class="phone">
-                    <p>{{ phone1 }}</p>
-                    <p>{{ phone2 }}</p>
+                    <a href="{{ phone1_href }}">{{ phone1 }}</a>
+                    <a href="{{ phone2_href }}">{{ phone2 }}</a>
                 </div>
             </div>
         </div>
@@ -66,7 +66,7 @@
                         <button class="tab-toggle ">{{ item.title_tab }}</button>
                     </div>
                     <div class="content  col-12 col-lg-7">
-                        <h3 class="heading">{{ item.title_tab_content }}</h3>
+                        <h3 class="heading d-none d-lg-block">{{ item.title_tab_content }}</h3>
                         <p class="description">{{ item.descr_tab }}</p>
                     </div>
                     {% endfor %}
@@ -374,7 +374,7 @@
         <div class="row items justify-content-center align-items-center no-gutters">
             <div class="col-12 col-md-12 col-xl-12 item justify-content-center align-items-center">
                 <div class="logo-footer">
-                    <a href=""><img src="../img/logo.png" alt="WeDo"></a>
+                    <a href=""><img src="img/logo.png" alt="WeDo"></a>
                     <div class="footer-phone">
                         <a href="{{ phone1_href }}">{{ phone1 }}</a>
                         <a href="{{ phone2_href }}">{{ phone2 }}</a>
