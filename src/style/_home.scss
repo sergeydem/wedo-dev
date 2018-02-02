@@ -1,8 +1,5 @@
 
 /*------------BEGIN header----------------*/
-.clicked {
-  background-color: rgba(68,125,152,.07) !important;
-}
 
 header {
   height: 100vh;
@@ -22,6 +19,9 @@ header {
   overflow: hidden;
   transition: 0s linear;
   transition-property: background-position;
+  @include media-breakpoint-down(sm) {
+    background-attachment: scroll;
+  }
   .header-items {
     display: flex;
     flex-direction: column;
@@ -34,7 +34,7 @@ header {
       height: 95px;
       color: $white;
       .logo {
-        width: 95px;
+        width: 130px;
         @include media-breakpoint-up(md){
           width: 170px;
         }
@@ -59,8 +59,9 @@ header {
           text-decoration: none;
           color: $white;
           @include media-breakpoint-down(sm){
-            font-size: 10px;
+            font-size: 12px;
             padding-left: 0;
+            margin-bottom: 5px;
           }
         }
       }
@@ -73,7 +74,7 @@ header {
         font-family: $OpenSansSemibold;
         letter-spacing: 2.2px;
         @include media-breakpoint-down(sm) {
-          font-size: 20px;
+          font-size: 22px;
         }
       }
     }
@@ -644,6 +645,9 @@ section {
   /*-------------END tabs*/
 }
 
+.clicked {
+  background-color: rgba(68,125,152,.07) !important;
+}
 
 /*Checkbox*/
 .c-custom-check {

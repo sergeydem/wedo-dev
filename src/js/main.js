@@ -88,9 +88,6 @@ $( document ).ready(function() {
 
 
 
-    $(function() {
-        $('select').selectric();
-    });
 
 
 //открытие модального окна
@@ -325,10 +322,3 @@ $( document ).ready(function() {
 
 
 });
-
-
-// $(window).load(function() {
-//
-//     $(".title-center h1").animated("slideInUp", "slideOutUp");
-//
-// });

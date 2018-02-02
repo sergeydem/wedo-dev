@@ -7,12 +7,13 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="">
+    <meta name="theme-color" content="#447d98">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
-    <script src="js/jquery.selectric.js"></script>
     <script src="js/bootstrap-formhelpers.min.js"></script>
+    <link rel="manifest" href="manifest.json">
     <link rel="shortcut icon" href="img/logo_fav.ico" type="image/x-icon">
 
 </head>
@@ -42,7 +43,7 @@
         <div class="row wrap-btn align-items-center justify-content-center">
             <div class="col-12 col-xl-4">
                 <div class="button">
-                    <a href="#" data-toggle="modal" data-target="#myModal" class="btn-pink"
+                    <a href="#" ontouchstart="" data-toggle="modal" data-target="#myModal" class="btn-pink"
                        data-wipe="{{ btn1 }}">{{ btn1 }}</a>
                 </div>
             </div>
@@ -89,13 +90,13 @@
                     <!-- Nav tabs -->
                     <ul class="nav nav-tabs" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" data-toggle="tab" href="{{ cards.head_tab.first_href }}" role="tab" >{{ cards.head_tab.first_title }}</a>
+                            <a class="nav-link active" data-toggle="tab" href="{{ cards.head_tab.first_href }}" role="tab">{{ cards.head_tab.first_title }}</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-toggle="tab" href="{{ cards.head_tab.second_href }}" role="tab">{{ cards.head_tab.second_title }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="{{ cards.head_tab.third_href }}" role="tab" >{{ cards.head_tab.third_title }}</a>
+                            <a class="nav-link" data-toggle="tab" href="{{ cards.head_tab.third_href }}" role="tab">{{ cards.head_tab.third_title }}</a>
                         </li>
                     </ul>
                     <!-- Tab panes -->
@@ -111,7 +112,7 @@
                             </ul>
                             <div class="wrap-btn">
                                 <div class="button" id="light" name="{{ cards.head_tab.first_title }}">
-                                    <a href="javascript:void(0)" class="btn-pink"
+                                    <a href="javascript:void(0)" ontouchstart="" class="btn-pink"
                                        data-wipe="{{ btn6 }}">{{ btn6 }}</a>
                                 </div>
                             </div>
@@ -127,7 +128,7 @@
                             </ul>
                             <div class="wrap-btn">
                                 <div class="button" id="medium"  name="{{ cards.head_tab.second_title }}">
-                                    <a href="javascript:void(0)" class="btn-pink"
+                                    <a href="javascript:void(0)" ontouchstart="" class="btn-pink"
                                        data-wipe="{{ btn6 }}">{{ btn6 }}</a>
                                 </div>
                             </div>
@@ -143,7 +144,7 @@
                             </ul>
                             <div class="wrap-btn">
                                 <div class="button" id="premium" name="{{ cards.head_tab.third_title }}">
-                                    <a href="javascript:void(0)" class="btn-pink"
+                                    <a href="javascript:void(0)" ontouchstart="" class="btn-pink"
                                        data-wipe="{{ btn6 }}">{{ btn6 }}</a>
                                 </div>
                             </div>
@@ -230,7 +231,7 @@
                                         </div>
                                         <div class="wrap-btn">
                                             <div class="button" id="light" name="{{ cards.head_tab.first_title }}">
-                                                <a href="javascript:void(0)" class="btn-pink"
+                                                <a href="javascript:void(0)" ontouchstart="" class="btn-pink"
                                                    data-wipe="{{ btn6 }}">{{ btn6 }}</a>
                                             </div>
                                         </div>
@@ -241,7 +242,7 @@
                                         </div>
                                         <div class="wrap-btn">
                                             <div class="button" id="medium"  name="{{ cards.head_tab.second_title }}">
-                                                <a href="javascript:void(0)" class="btn-pink"
+                                                <a href="javascript:void(0)" ontouchstart="" class="btn-pink"
                                                    data-wipe="{{ btn6 }}">{{ btn6 }}</a>
                                             </div>
                                         </div>
@@ -252,7 +253,7 @@
                                         </div>
                                         <div class="wrap-btn">
                                             <div class="button" id="premium" name="{{ cards.head_tab.third_title }}">
-                                                <a href="javascript:void(0)" class="btn-pink"
+                                                <a href="javascript:void(0)" ontouchstart="" class="btn-pink"
                                                    data-wipe="{{ btn6 }}">{{ btn6 }}</a>
                                             </div>
                                         </div>
@@ -302,7 +303,7 @@
             <div class="col-12">
                 <div class="wrap-btn">
                     <div class="button">
-                        <a href="#" data-toggle="modal" id="modalBtn" data-target="#myModal3" class="btn-pink"
+                        <a href="#" ontouchstart="" data-toggle="modal" id="modalBtn" data-target="#myModal3" class="btn-pink"
                            data-wipe="{{ btn2 }}">{{ btn2 }}</a>
                     </div>
                 </div>
@@ -321,7 +322,7 @@
         </div>
         <div class="row wrap-why-us">
             {% for item in fact %}
-            <div class="col item-fact">
+            <div class="col-12 col-md item-fact">
                 <div class="wrap-fact">
                     <div class="icon">
                         <img src="{{ item.img }}" alt="{{ item.img_alt }}">
@@ -429,7 +430,7 @@
                                         <div class="button-container">
                                             <div class="wrap-btn">
                                                 <div class="button">
-                                                    <button type="submit" class="btn"
+                                                    <button type="submit" ontouchstart="" class="btn"
                                                             data-wipe="{{ btn4 }}">{{ btn4 }}</button>
                                                     <!--<a href="" id="submit-btn" class="btn-pink" data-wipe="Отправить заявку">Отправить заявку</a>-->
                                                 </div>
@@ -504,7 +505,7 @@
                                     <div class="button-container">
                                         <div class="wrap-btn">
                                             <div class="button">
-                                                <button type="submit" class="btn"
+                                                <button type="submit" ontouchstart="" class="btn"
                                                         data-wipe="{{ btn4 }}">{{ btn4 }}</button>
                                                 <!--<a href="" id="submit-btn" class="btn-pink" data-wipe="Отправить заявку">Отправить заявку</a>-->
                                             </div>
@@ -529,7 +530,7 @@
                 <div class="modal-footer">
                     <div class="wrap-btn">
                         <div class="button">
-                            <a href="#" data-dismiss="modal" class="btn-pink" data-wipe="{{ btn5 }}">{{ btn5 }}</a>
+                            <a href="#" ontouchstart="" data-dismiss="modal" class="btn-pink" data-wipe="{{ btn5 }}">{{ btn5 }}</a>
                         </div>
                     </div>
                 </div>
