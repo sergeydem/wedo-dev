@@ -42,7 +42,7 @@
         <div class="row wrap-btn align-items-center justify-content-center">
             <div class="col-12 col-xl-4">
                 <div class="button">
-                    <a href="#" data-toggle="modal" data-target="#myModal" class="btn-pink"
+                    <a href="#" ontouchstart="" data-toggle="modal" data-target="#myModal" class="btn-pink"
                        data-wipe="{{ btn1 }}">{{ btn1 }}</a>
                 </div>
             </div>
@@ -111,7 +111,7 @@
                             </ul>
                             <div class="wrap-btn">
                                 <div class="button" id="light">
-                                    <a href="javascript:void(0)" class="btn-pink"
+                                    <a href="javascript:void(0)" ontouchstart="" class="btn-pink"
                                        data-wipe="{{ btn6 }}">{{ btn6 }}</a>
                                 </div>
                             </div>
@@ -127,7 +127,7 @@
                             </ul>
                             <div class="wrap-btn">
                                 <div class="button" id="medium">
-                                    <a href="javascript:void(0)" class="btn-pink"
+                                    <a href="javascript:void(0)" ontouchstart="" class="btn-pink"
                                        data-wipe="{{ btn6 }}">{{ btn6 }}</a>
                                 </div>
                             </div>
@@ -143,7 +143,7 @@
                             </ul>
                             <div class="wrap-btn">
                                 <div class="button" id="premium">
-                                    <a href="javascript:void(0)" class="btn-pink"
+                                    <a href="javascript:void(0)" ontouchstart="" class="btn-pink"
                                        data-wipe="{{ btn6 }}">{{ btn6 }}</a>
                                 </div>
                             </div>
@@ -230,7 +230,7 @@
                                         </div>
                                         <div class="wrap-btn">
                                             <div class="button" id="light">
-                                                <a href="javascript:void(0)" class="btn-pink"
+                                                <a href="javascript:void(0)" ontouchstart="" class="btn-pink"
                                                    data-wipe="{{ btn6 }}">{{ btn6 }}</a>
                                             </div>
                                         </div>
@@ -241,7 +241,7 @@
                                         </div>
                                         <div class="wrap-btn">
                                             <div class="button" id="medium">
-                                                <a href="javascript:void(0)" class="btn-pink"
+                                                <a href="javascript:void(0)" ontouchstart="" class="btn-pink"
                                                    data-wipe="{{ btn6 }}">{{ btn6 }}</a>
                                             </div>
                                         </div>
@@ -252,7 +252,7 @@
                                         </div>
                                         <div class="wrap-btn">
                                             <div class="button" id="premium">
-                                                <a href="javascript:void(0)" class="btn-pink"
+                                                <a href="javascript:void(0)" ontouchstart="" class="btn-pink"
                                                    data-wipe="{{ btn6 }}">{{ btn6 }}</a>
                                             </div>
                                         </div>
@@ -302,7 +302,7 @@
             <div class="col-12">
                 <div class="wrap-btn">
                     <div class="button">
-                        <a href="#" data-toggle="modal" data-target="#myModal3" class="btn-pink"
+                        <a href="#" ontouchstart="" data-toggle="modal" data-target="#myModal3" class="btn-pink"
                            data-wipe="{{ btn2 }}">{{ btn2 }}</a>
                     </div>
                 </div>
@@ -321,7 +321,7 @@
         </div>
         <div class="row wrap-why-us">
             {% for item in fact %}
-            <div class="col item-fact">
+            <div class="col-12 col-md item-fact">
                 <div class="wrap-fact">
                     <div class="icon">
                         <img src="{{ item.img }}" alt="{{ item.img_alt }}">
@@ -429,7 +429,7 @@
                                         <div class="button-container">
                                             <div class="wrap-btn">
                                                 <div class="button">
-                                                    <button type="submit" class="btn"
+                                                    <button type="submit" ontouchstart="" class="btn"
                                                             data-wipe="{{ btn4 }}">{{ btn4 }}</button>
                                                     <!--<a href="" id="submit-btn" class="btn-pink" data-wipe="Отправить заявку">Отправить заявку</a>-->
                                                 </div>
@@ -504,7 +504,7 @@
                                     <div class="button-container">
                                         <div class="wrap-btn">
                                             <div class="button">
-                                                <button type="submit" class="btn"
+                                                <button type="submit" ontouchstart="" class="btn"
                                                         data-wipe="{{ btn4 }}">{{ btn4 }}</button>
                                                 <!--<a href="" id="submit-btn" class="btn-pink" data-wipe="Отправить заявку">Отправить заявку</a>-->
                                             </div>
@@ -529,7 +529,7 @@
                 <div class="modal-footer">
                     <div class="wrap-btn">
                         <div class="button">
-                            <a href="#" data-dismiss="modal" class="btn-pink" data-wipe="{{ btn5 }}">{{ btn5 }}</a>
+                            <a href="#" ontouchstart="" data-dismiss="modal" class="btn-pink" data-wipe="{{ btn5 }}">{{ btn5 }}</a>
                         </div>
                     </div>
                 </div>
