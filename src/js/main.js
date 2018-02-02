@@ -214,7 +214,7 @@ $( document ).ready(function() {
 
     // calculating total price and total time:
     var checkBoxes =  $('input[type=checkbox]');
-
+    var options = {} ;
     var totalPrice ;
     var basePrice    = allOptions.main.light.price ;
     var optionsPrice = 0 ;
@@ -222,10 +222,13 @@ $( document ).ready(function() {
     var totalTime;
     var baseTime    = allOptions.main.light.time  ;
     var optionsTime = 0 ;
+    var tariffName ;
+
 
     $('[id="light"]').click(function(){
         basePrice = allOptions.main.light.price;
         baseTime  = allOptions.main.light.time;
+        updateTariff(this.id);
         checkBoxes.change();
     });
 
@@ -233,14 +236,19 @@ $( document ).ready(function() {
         basePrice = allOptions.main.medium.price;
         baseTime  = allOptions.main.medium.time;
         checkBoxes.change();
+        updateTariff(this.id);
     });
+
     $('[id="premium"]').click(function(){
         basePrice = allOptions.main.premium.price;
         baseTime  = allOptions.main.premium.time;
         checkBoxes.change();
+        updateTariff(this.id);
     });
 
-
+    $('#modalBtn').click(function () {
+        checkBoxes.change();
+    });
 
 
     checkBoxes.change(function() {
@@ -248,28 +256,64 @@ $( document ).ready(function() {
         optionsTime = 0 ;
         $('input[type=checkbox]').each(function () {
             if (this.checked) {
+                options[this.id] = this.name;
                 optionsPrice += allOptions['options'][this.id]['price'];
                 optionsTime  += allOptions['options'][this.id]['time']
+            }else{
+                if (typeof options[this.id] !== 'undefined') {
+                    delete options[this.id];
+                }
             }
         });
 
         totalPrice = parseInt(basePrice) + parseInt(optionsPrice) ;
         totalTime  = parseInt(baseTime)  + parseInt(optionsTime)  ;
 
-        updateTotalPriceandTime(totalPrice,totalTime);
+        updateTotalPriceAndTime(totalPrice,totalTime);
+        // update form data :
+        updateFormOptions(options);
     });
 
-
-
-    function updateTotalPriceandTime(totalPrice,totalTime){
+    function updateTotalPriceAndTime(totalPrice,totalTime){
+        // set price and time for the page :
         $('#totalPrice').html('$'+totalPrice);
+        $('#totalPriceForm').html('$'+totalPrice);
         var time = 'месяца' ;
         if(totalTime == 1 ){
             time = 'месяц';
         }else if(totalTime>4){
             time = 'месяцев' ;
         }
+
+        // set time and price on the form :
         $('#totalTime').html(totalTime+' '+time);
+        $('#totalTimeForm').html(totalTime+' '+time);
+
+        // change the value of the input field in the form :
+        $('#input-cost').val('$'+totalPrice);
+        $('#input-date').val(totalTime+' '+time);
+
+    }
+
+    /* Записать данные, которые выбрал пользователь на форме */
+
+    function updateFormOptions(options){
+        var arrValues = Object.values(options);
+        var additionalOptions =  $('#additionalOptions');
+        additionalOptions.html('- ');
+        additionalOptions.append(arrValues.join('<br/>- '));
+
+        // options input value :
+        $('#input-options').val(arrValues);
+    }
+
+    function updateTariff(id){
+        // update tariff on the form
+        tariffName = $('#'+id).attr('name');
+        $('#mainTariff').html(tariffName);
+
+        // tariff input value :
+        $('#input-tariff').val(tariffName);
     }
 
 

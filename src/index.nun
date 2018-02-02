@@ -89,13 +89,13 @@
                     <!-- Nav tabs -->
                     <ul class="nav nav-tabs" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" data-toggle="tab" href="{{ cards.head_tab.first_href }}" role="tab">{{ cards.head_tab.first_title }}</a>
+                            <a class="nav-link active" data-toggle="tab" href="{{ cards.head_tab.first_href }}" role="tab" >{{ cards.head_tab.first_title }}</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-toggle="tab" href="{{ cards.head_tab.second_href }}" role="tab">{{ cards.head_tab.second_title }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="{{ cards.head_tab.third_href }}" role="tab">{{ cards.head_tab.third_title }}</a>
+                            <a class="nav-link" data-toggle="tab" href="{{ cards.head_tab.third_href }}" role="tab" >{{ cards.head_tab.third_title }}</a>
                         </li>
                     </ul>
                     <!-- Tab panes -->
@@ -110,7 +110,7 @@
                                 {% endfor %}
                             </ul>
                             <div class="wrap-btn">
-                                <div class="button" id="light">
+                                <div class="button" id="light" name="{{ cards.head_tab.first_title }}">
                                     <a href="javascript:void(0)" class="btn-pink"
                                        data-wipe="{{ btn6 }}">{{ btn6 }}</a>
                                 </div>
@@ -126,7 +126,7 @@
                                 {% endfor %}
                             </ul>
                             <div class="wrap-btn">
-                                <div class="button" id="medium">
+                                <div class="button" id="medium"  name="{{ cards.head_tab.second_title }}">
                                     <a href="javascript:void(0)" class="btn-pink"
                                        data-wipe="{{ btn6 }}">{{ btn6 }}</a>
                                 </div>
@@ -142,7 +142,7 @@
                                 {% endfor %}
                             </ul>
                             <div class="wrap-btn">
-                                <div class="button" id="premium">
+                                <div class="button" id="premium" name="{{ cards.head_tab.third_title }}">
                                     <a href="javascript:void(0)" class="btn-pink"
                                        data-wipe="{{ btn6 }}">{{ btn6 }}</a>
                                 </div>
@@ -229,7 +229,7 @@
                                             {{ table.footer.first }}
                                         </div>
                                         <div class="wrap-btn">
-                                            <div class="button" id="light">
+                                            <div class="button" id="light" name="{{ cards.head_tab.first_title }}">
                                                 <a href="javascript:void(0)" class="btn-pink"
                                                    data-wipe="{{ btn6 }}">{{ btn6 }}</a>
                                             </div>
@@ -240,7 +240,7 @@
                                             {{ table.footer.second }}
                                         </div>
                                         <div class="wrap-btn">
-                                            <div class="button" id="medium">
+                                            <div class="button" id="medium"  name="{{ cards.head_tab.second_title }}">
                                                 <a href="javascript:void(0)" class="btn-pink"
                                                    data-wipe="{{ btn6 }}">{{ btn6 }}</a>
                                             </div>
@@ -251,7 +251,7 @@
                                             {{ table.footer.third }}
                                         </div>
                                         <div class="wrap-btn">
-                                            <div class="button" id="premium">
+                                            <div class="button" id="premium" name="{{ cards.head_tab.third_title }}">
                                                 <a href="javascript:void(0)" class="btn-pink"
                                                    data-wipe="{{ btn6 }}">{{ btn6 }}</a>
                                             </div>
@@ -276,7 +276,7 @@
                         <label for="{{ item.for }}" class="c-custom-check" data-toggle="tooltip" data-placement="top" data-html="true"
                                title="{{ item.tooltip }}">
                             {{ item.label_option }}
-                            <input required type="checkbox" id="{{ item.id }}">
+                            <input required type="checkbox" id="{{ item.id }}" name="{{ item.label_option }}">
                             <div class="c-custom-check__indicator"></div>
                         </label>
                         {% endfor %}
@@ -302,7 +302,7 @@
             <div class="col-12">
                 <div class="wrap-btn">
                     <div class="button">
-                        <a href="#" data-toggle="modal" data-target="#myModal3" class="btn-pink"
+                        <a href="#" data-toggle="modal" id="modalBtn" data-target="#myModal3" class="btn-pink"
                            data-wipe="{{ btn2 }}">{{ btn2 }}</a>
                     </div>
                 </div>
@@ -468,22 +468,22 @@
                                     <div class="summary-output">
                                         <div class="tariff-plan">
                                             <div class="title">{{ tariff_plan }}:</div>
-                                            <div class="value">Бизнес</div>
+                                            <div class="value" id="mainTariff">Первый</div>
                                             <input id="input-tariff" name="tariff" type="hidden" value="">
                                         </div>
                                         <div class="additional-options">
                                             <div class="title">{{ additional_options }}:</div>
-                                            <div class="value">-</div>
+                                            <div class="value" id="additionalOptions"></div>
                                             <input id="input-options" name="options" type="hidden" value="">
                                         </div>
                                         <div class="date">
                                             <div class="title">{{ title_total_time }}:</div>
-                                            <div class="value">-</div>
+                                            <div class="value" id="totalTimeForm">-</div>
                                             <input id="input-date" name="date" type="hidden" value="">
                                         </div>
                                         <div class="cost">
                                             <div class="title">{{ title_total_cost }}:</div>
-                                            <div class="value">-</div>
+                                            <div class="value" id="totalPriceForm"></div>
                                             <input id="input-cost" name="cost" type="hidden" value="">
                                         </div>
                                     </div>
