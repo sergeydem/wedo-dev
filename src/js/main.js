@@ -297,7 +297,7 @@ $( document ).ready(function() {
     function updateFormOptions(options){
         var arrValues = Object.values(options);
         var additionalOptions =  $('#additionalOptions');
-        additionalOptions.append(arrValues.join(';'));
+        additionalOptions.html(arrValues.join(';'));
 
         // options input value :
         $('#input-options').val(arrValues);
