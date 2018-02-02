@@ -1,8 +1,5 @@
 
 /*------------BEGIN header----------------*/
-.clicked {
-  background-color: rgba(68,125,152,.07) !important;
-}
 
 header {
   height: 100vh;
@@ -648,6 +645,9 @@ section {
   /*-------------END tabs*/
 }
 
+.clicked {
+  background-color: rgba(68,125,152,.07) !important;
+}
 
 /*Checkbox*/
 .c-custom-check {
