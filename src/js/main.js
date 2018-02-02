@@ -91,7 +91,7 @@ $( document ).ready(function() {
 
 
 //открытие модального окна
-    $('#myModal').on('shown.bs.modal', function () {
+    $('#myModal, #myModal3').on('shown.bs.modal', function () {
         // $('#myInput').focus()
     });
 

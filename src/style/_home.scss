@@ -1001,7 +1001,7 @@ footer {
 
 #myModal3 {
   .modal-body {
-    #callback-form {
+    #callback-form, #commercial-offer {
       .wrap-input {
         display: flex;
         @include media-breakpoint-down(sm){
