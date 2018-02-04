@@ -109,7 +109,28 @@ $( document ).ready(function() {
 
 
     //Документация: http://api.jquery.com/jquery.ajax/
+    $("#commercial-offer").submit(function() {
+        var str =   $("#Phone-com").val();
+        var found = str.match(/(?:\w)(?:(?:(?:(?:\+?3)?8\W{0,5})?0\W{0,5})?[34569]\s?\d[^\w,;(\+]{0,5})?\d\W{0,5}\d\W{0,5}\d\W{0,5}\d\W{0,5}\d\W{0,5}\d\W{0,5}\d(?!(\W?\d))/)
+
+        if (found !== null) {
+            $.ajax({
+                type: "POST",
+                url: "mail.php",
+                data: $("#commercial-offer").serialize()
+            }).done(function() {
+                $('.modal.commercial').modal('toggle');
+                $('.modal.thank-you').modal('toggle');
+            });
+        }
+        else {
+            $('#errorMessage').css("display","block");
+        }
+        return false;
+    });
+
     $("#callback-form").submit(function() {
+
         var str =   $("#Phone").val();
         var found = str.match(/(?:\w)(?:(?:(?:(?:\+?3)?8\W{0,5})?0\W{0,5})?[34569]\s?\d[^\w,;(\+]{0,5})?\d\W{0,5}\d\W{0,5}\d\W{0,5}\d\W{0,5}\d\W{0,5}\d\W{0,5}\d(?!(\W?\d))/)
 
@@ -119,13 +140,8 @@ $( document ).ready(function() {
                 url: "mail.php",
                 data: $("#callback-form").serialize()
             }).done(function() {
-                $('.modal').modal('toggle');
-                setTimeout(function() {
-                    //alert(message);
-                    // $('#alert').css("display", "block");
-                   // $("#myModal2").css("display", "block").addClass('show');
-                    $('#myModal2').fadeIn();
-                }, 700);
+                $('.modal.call-us').modal('toggle');
+                $('.modal.thank-you').modal('toggle');
             });
         }
         else {
@@ -221,6 +237,7 @@ $( document ).ready(function() {
     var optionsTime = 0 ;
     var tariffName ;
 
+    updateTariff('light');
 
     $('[id="light"]').click(function(){
         basePrice = allOptions.main.light.price;
@@ -287,8 +304,8 @@ $( document ).ready(function() {
         $('#totalTimeForm').html(totalTime+' '+time);
 
         // change the value of the input field in the form :
-        $('#input-cost').val('$'+totalPrice);
-        $('#input-date').val(totalTime+' '+time);
+        $('#cost-val').val(totalPrice);
+        $('#date').val(totalTime+' '+time);
 
     }
 
@@ -300,7 +317,7 @@ $( document ).ready(function() {
         additionalOptions.html(arrValues.join(';'));
 
         // options input value :
-        $('#input-options').val(arrValues);
+        $('#options').val(arrValues);
     }
 
     function updateTariff(id){
@@ -309,7 +326,7 @@ $( document ).ready(function() {
         $('#mainTariff').html(tariffName);
 
         // tariff input value :
-        $('#input-tariff').val(tariffName);
+        $('#tariff').val(tariffName);
     }
 
 

@@ -392,7 +392,7 @@
 </footer>
 
 <!-- Modal -->
-<div class="modal fade" id="myModal">
+<div class="modal call-us fade" id="myModal">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="container-fluid">
@@ -448,7 +448,7 @@
             </div>
         </div>
     </div>
-<div class="modal fade" id="myModal3">
+<div class="modal commercial fade" id="myModal3">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="container-fluid">
@@ -473,34 +473,34 @@
                                         <div class="tariff-plan">
                                             <div class="title">{{ tariff_plan }}:</div>
                                             <div class="value" id="mainTariff">Первый</div>
-                                            <input id="input-tariff" name="tariff" type="hidden" value="">
+                                            <input id="tariff" name="tariff" type="hidden" value="">
                                         </div>
                                         <div class="additional-options">
                                             <div class="title">{{ additional_options }}:</div>
                                             <div class="value" id="additionalOptions"></div>
-                                            <input id="input-options" name="options" type="hidden" value="">
+                                            <input id="options" name="options" type="hidden" value="">
                                         </div>
                                         <div class="date">
                                             <div class="title">{{ title_total_time }}:</div>
                                             <div class="value" id="totalTimeForm">-</div>
-                                            <input id="input-date" name="date" type="hidden" value="">
+                                            <input id="date" name="date" type="hidden" value="">
                                         </div>
                                         <div class="cost">
                                             <div class="title">{{ title_total_cost }}:</div>
                                             <div class="value" id="totalPriceForm"></div>
-                                            <input id="input-cost" name="cost" type="hidden" value="">
+                                            <input id="cost-val" name="cost-val" type="hidden" value="">
                                         </div>
                                     </div>
                                     <div class="wrap-input">
                                     <div class="input-container">
-                                        <input type="text" id="Username" name="Username" required>
-                                        <label for="Username">{{ input_name }}</label>
+                                        <input type="text" id="Username-com" name="Username-com" required>
+                                        <label for="Username-com">{{ input_name }}</label>
                                         <div class="bar"></div>
                                     </div>
                                     <div class="input-container number">
-                                        <input class="form-control bfh-phone" type="text" id="Phone" value=""
-                                               name="Phone" data-format="+380 (dd) ddd-dd-dd" required>
-                                        <label for="Phone">{{ input_phone }}</label>
+                                        <input class="form-control bfh-phone" type="text" id="Phone-com" value=""
+                                               name="Phone-com" data-format="+380 (dd) ddd-dd-dd" required>
+                                        <label for="Phone-com">{{ input_phone }}</label>
                                         <div class="bar"></div>
                                     </div>
                                     <div id="errorMessage" style="display: none">{{ error_mes }}</div>
@@ -523,7 +523,7 @@
         </div>
     </div>
 </div>
-<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<div class="modal thank-you fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
          aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
