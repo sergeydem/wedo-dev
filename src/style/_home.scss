@@ -1055,6 +1055,13 @@ footer {
     font-size: 12px;
     color: #ff0000;
   }
+  #errorMessage2 {
+    bottom: 100px;
+    position: absolute;
+    right: 0;
+    font-size: 12px;
+    color: #ff0000;
+  }
 
   /* Inputs */
   .input-container {
@@ -1157,6 +1164,11 @@ footer {
     }
   }
 }
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
 
 .number:hover::after{
   content: "+380(67)111-22-33";

@@ -503,7 +503,7 @@
                                         <label for="Phone-com">{{ input_phone }}</label>
                                         <div class="bar"></div>
                                     </div>
-                                    <div id="errorMessage" style="display: none">{{ error_mes }}</div>
+                                    <div id="errorMessage2" style="display: none">{{ error_mes }}</div>
                                     </div>
                                     <div class="button-container">
                                         <div class="wrap-btn">

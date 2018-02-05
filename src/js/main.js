@@ -124,7 +124,7 @@ $( document ).ready(function() {
             });
         }
         else {
-            $('#errorMessage').css("display","block");
+            $('#errorMessage2').css("display","block");
         }
         return false;
     });
@@ -244,6 +244,9 @@ $( document ).ready(function() {
         baseTime  = allOptions.main.light.time;
         updateTariff(this.id);
         checkBoxes.change();
+        $('html, body').animate({
+            scrollTop: $("div.options").offset().top
+        }, 1000);
     });
 
     $('[id="medium"]').click(function(){
@@ -251,6 +254,9 @@ $( document ).ready(function() {
         baseTime  = allOptions.main.medium.time;
         checkBoxes.change();
         updateTariff(this.id);
+        $('html, body').animate({
+            scrollTop: $("div.options").offset().top
+        }, 1000);
     });
 
     $('[id="premium"]').click(function(){
@@ -258,6 +264,10 @@ $( document ).ready(function() {
         baseTime  = allOptions.main.premium.time;
         checkBoxes.change();
         updateTariff(this.id);
+        $('html, body').animate({
+                scrollTop: $("div.options").offset().top
+        }, 1000);
+
     });
 
     $('#modalBtn').click(function () {
