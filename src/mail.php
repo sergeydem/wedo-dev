@@ -3,7 +3,7 @@
 
 if((isset($_POST['Username'])&&$_POST['Username']!="")&&(isset($_POST['Phone'])&&$_POST['Phone']!="")&&(isset($_POST['comment'])&&$_POST['comment']!="")){//Проверка отправилось ли наше поля name и не пустые ли они
     $to = 'sergeydem24@gmail.com'; //Почта получателя, через запятую можно указать сколько угодно адресов
-    $subject = 'Обратная связь с сайта WeDo Интернет магазины'; //Загаловок сообщения
+    $subject = 'WeDo Интернет магазины обратный звонок'; //Загаловок сообщения
     $message = '
                 <html>
                     <head>
@@ -29,7 +29,7 @@ if((isset($_POST['Username'])&&$_POST['Username']!="")&&(isset($_POST['Phone'])&
 
 if((isset($_POST['Username-com'])&&$_POST['Username-com']!="")&&(isset($_POST['Phone-com'])&&$_POST['Phone-com']!="")){//Проверка отправилось ли наше поля name и не пустые ли они
     $to = 'sergeydem24@gmail.com'; //Почта получателя, через запятую можно указать сколько угодно адресов
-    $subject = 'Обратная связь с сайта WeDo Интернет магазины'; //Загаловок сообщения
+    $subject = 'WeDo Интернет магазины. Коммерческое предложение'; //Загаловок сообщения
     $message = '
                 <html>
                     <head>
@@ -38,10 +38,10 @@ if((isset($_POST['Username-com'])&&$_POST['Username-com']!="")&&(isset($_POST['P
                     <body>
                         <p>Имя: '.$_POST['Username-com'].'</p>
                         <p>Телефон: '.$_POST['Phone-com'].'</p>
-                        <p>:Опции '.$_POST['options'].'</p>  
-                        <p>:Tariff '.$_POST['tariff'].'</p>
-                        <p>:Cost '.$_POST['cost-val'].'</p>
-                        <p>:Date '.$_POST['date'].'</p>
+                        <p>Тариф: '.$_POST['tariff'].'</p>
+                        <p>Опции: '.$_POST['options'].'</p>  
+                        <p>Стоимость: '.$_POST['cost-val'].'</p>
+                        <p>Сроки: '.$_POST['date'].'</p>
                     </body>
                 </html>'; //Текст нащего сообщения можно использовать HTML теги
     $headers  = "Content-type: text/html; charset=utf-8 \r\n"; //Кодировка письма
