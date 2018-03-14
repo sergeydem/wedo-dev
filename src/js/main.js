@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 //------------OWL
-    $('.owl-carousel').owlCarousel({
+    $('.slider-seo').owlCarousel({
         nav: false,
         dots: true,
         responsive:{
@@ -21,6 +21,28 @@ $( document ).ready(function() {
                 mouseDrag: false,
                 touchDrag: false,
                 pullDrag: false
+            }
+        }
+    });
+
+    $('.slider-work').owlCarousel({
+        loop:true, //Зацикливаем слайдер
+        margin:50, //Отступ от картино если выводите больше 1
+        autoplay:false, //Автозапуск слайдера
+        smartSpeed:2000, //Время движения слайда
+        autoplayTimeout:6000, //Время смены слайда
+        dots: false,
+        nav: true,
+        navText : ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
+        responsive:{ //Адаптация в зависимости от разрешения экрана
+            0:{
+                items:1
+            },
+            600:{
+                items:1
+            },
+            1000:{
+                items:2
             }
         }
     });
@@ -344,7 +366,7 @@ $( document ).ready(function() {
 
 
     /*Animation*/
-    $("#cost, #feature, #why-us, #promotion").animated("slideInUp", "slideOutUp");
+    $("#cost, #feature, #why-us, #promotion, #works").animated("slideInUp", "slideOutUp");
     $(".options, .wrap-cost, .home-button").animated("slideInUp", "slideOutUp");
 
 

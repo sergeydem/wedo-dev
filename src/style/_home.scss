@@ -335,6 +335,67 @@ section {
 }
 /*-------------------END #feature*/
 
+
+/*------------------#works*/
+#works {
+  .slider-work {
+    padding-top: 50px;
+    .item {
+      max-height: 400px;
+      width: 100%;
+      overflow: hidden;
+      .wrap-slid {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .wrap-img {
+          width: 100%;
+          height: 170px;
+          overflow: hidden;
+          @include media-breakpoint-up(sm){
+            height: 200px;
+          }
+          a {
+            img {
+              -webkit-transform: scale(1);
+              transform: scale(1);
+              -webkit-transition: .3s ease-in-out;
+              transition: .3s ease-in-out;
+              &:hover {
+                -webkit-transform: scale(1.3);
+                transform: scale(1.3);
+              }
+            }
+          }
+        }
+        .wrap-descr {
+          padding-top: 20px;
+          p {
+            font-size: 16px;
+            width: 100%;
+            text-align: center;
+            @include media-breakpoint-up(sm){
+              font-size: 20px;
+            }
+          }
+        }
+        .wrap-link {
+          a {
+            text-decoration: none;
+            color: $blue;
+            &:hover {
+              color: $black;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*------------------END #works*/
+
+
 /*-------------------#cost*/
 #cost {
   .table {
@@ -861,31 +922,30 @@ section {
       }
     }
   }
-//owl dot
-  .owl-dot {
-    background: $white;
-    height: 12px;
-    width: 12px;
-    border-radius: 10px;
-    border: 1px solid $blue;
-    margin: 0 3px;
-  }
-  .owl-dot.active {
-    background: $blue;
-    height: 12px;
-    width: 12px;
-    border-radius: 10px;
-    border: 1px solid $blue;
-  }
-  .owl-dots {
-    display: flex;
-    height: 20px;
-    justify-content: center;
-    margin-top: 20px;
-  }
-
 }
 
+//owl dot
+.owl-dot {
+  background: $white;
+  height: 12px;
+  width: 12px;
+  border-radius: 10px;
+  border: 1px solid $blue;
+  margin: 0 3px;
+}
+.owl-dot.active {
+  background: $blue;
+  height: 12px;
+  width: 12px;
+  border-radius: 10px;
+  border: 1px solid $blue;
+}
+.owl-dots {
+  display: flex;
+  height: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
 /*------------------END #promotion*/
 
 
