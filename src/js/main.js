@@ -28,9 +28,9 @@ $( document ).ready(function() {
     $('.slider-work').owlCarousel({
         loop:true, //Зацикливаем слайдер
         margin:50, //Отступ от картино если выводите больше 1
-        autoplay:false, //Автозапуск слайдера
+        autoplay:true, //Автозапуск слайдера
         smartSpeed:2000, //Время движения слайда
-        autoplayTimeout:6000, //Время смены слайда
+        autoplayTimeout:7000, //Время смены слайда
         dots: false,
         nav: true,
         navText : ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
