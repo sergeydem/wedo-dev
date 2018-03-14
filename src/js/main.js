@@ -28,18 +28,20 @@ $( document ).ready(function() {
     $('.slider-work').owlCarousel({
         loop:true, //Зацикливаем слайдер
         margin:50, //Отступ от картино если выводите больше 1
-        autoplay:true, //Автозапуск слайдера
+        autoplay:false, //Автозапуск слайдера
         smartSpeed:2000, //Время движения слайда
         autoplayTimeout:7000, //Время смены слайда
         dots: false,
         nav: true,
-        navText : ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
+        navText: ["<img src='../img/Arrows-Back-icon.png'>","<img src='../img/Arrows-Back-icon.png'>"],
         responsive:{ //Адаптация в зависимости от разрешения экрана
             0:{
-                items:1
+                items:1,
+                dots: true
             },
             600:{
-                items:1
+                items:1,
+                dots: true
             },
             1000:{
                 items:2

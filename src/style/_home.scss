@@ -946,6 +946,29 @@ section {
   justify-content: center;
   margin-top: 20px;
 }
+
+.owl-prev,
+.owl-next {
+  position: absolute;
+  top: 40%;
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.owl-next {
+  right: -40px;
+
+  img {
+    transform: rotate(180deg);
+  }
+}
+
+.owl-prev {
+  left: -40px;
+}
 /*------------------END #promotion*/
 
 
