@@ -91,69 +91,62 @@
         <div class="row append-dots">
             <div class="owl-carousel slider-work">
                 <div class="item">
-                    <div class="wrap-slid">
-                        <div class="wrap-img">
-                            <a href="https://chikiss.com.ua/" target="_blank"><img src="img/chikiss.jpg" alt="chikiss"></a>
-                        </div>
+                    <div class="wrap-slid slide1">
                         <div class="wrap-descr">
                             <p>Интернет-магазин нижнего белья и одежды с интеграцией с 1С</p>
-                        </div>
-                        <div class="wrap-link">
-                            <a href="https://chikiss.com.ua/" target="_blank">chikiss.com.ua</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="wrap-slid">
-                        <div class="wrap-img">
-                            <a href="https://ankor-crimea.ru/" target="_blank"><img src="img/ankor-krym.jpg" class="img-fluid" alt="ankor-krym"></a>
-                        </div>
-                        <div class="wrap-descr">
-                            <p>Интернет-магазин строительных материалов</p>
-                        </div>
-                        <div class="wrap-link">
-                            <a href="https://ankor-crimea.ru/" target="_blank">ankor-crimea.ru</a>
+                            <div class="wrap-link">
+                                <a href="https://chikiss.com.ua/" target="_blank">chikiss.com.ua</a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="item">
-                    <div class="wrap-slid">
-                        <div class="wrap-img">
-                            <a href="https://lotos24.com.ua/" target="_blank"><img src="img/lotos.jpg" class="img-fluid" alt="lotos"></a>
-                        </div>
+                    <div class="wrap-slid slide2">
                         <div class="wrap-descr">
                             <p>Интернет-магазин бытовой химии и косметики с интеграцией с 1С</p>
-                        </div>
-                        <div class="wrap-link">
-                            <a href="https://lotos24.com.ua/" target="_blank">lotos24.com.ua</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="wrap-slid">
-                        <div class="wrap-img">
-                            <a href="https://ankor-profili.ru/" target="_blank"><img src="img/ankor-profili.jpg" class="img-fluid" alt="ankor-profili"></a>
-                        </div>
-                        <div class="wrap-descr">
-                            <p>Лэндинг для контекстной рекламы</p>
-                        </div>
-                        <div class="wrap-link">
-                            <a href="https://ankor-profili.ru/" target="_blank">ankor-profili.ru</a>
+                            <div class="wrap-link">
+                                <a href="https://lotos24.com.ua" target="_blank">lotos24.com.ua</a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="item">
-                    <div class="wrap-slid">
-                        <div class="wrap-img">
-                            <a href="https://поликарбонкрым.рф" target="_blank"><img src="img/ankor-policarbonat.jpg" class="img-fluid" alt="поликарбонкрым"></a>
-                        </div>
+                    <div class="wrap-slid slide3">
                         <div class="wrap-descr">
-                            <p>Лэндинг для контекстной рекламы</p>
-                        </div>
-                        <div class="wrap-link">
-                            <a href="https://поликарбонкрым.рф" target="_blank">поликарбонкрым.рф</a>
+                            <p>Интернет-магазин строительных материалов</p>
+                            <div class="wrap-link">
+                                <a href="https://ankor-crimea.ru" target="_blank">ankor-crimea.ru</a>
+                            </div>
                         </div>
                     </div>
+                </div>
+                <div class="item">
+                    <div class="wrap-slid slide4">
+                        <div class="wrap-descr">
+                            <p>Лэндинг для контекстной рекламы</p>
+                            <div class="wrap-link">
+                                <a href="https://ankor-profili.ru" target="_blank">ankor-profili.ru</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="wrap-slid slide5">
+                        <div class="wrap-descr">
+                            <p>Лэндинг для контекстной рекламы</p>
+                            <div class="wrap-link">
+                                <a href="https://поликарбонкрым.рф" target="_blank">поликарбонкрым.рф</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row wrap-btn align-items-center justify-content-center">
+            <div class="col-12 col-xl-4">
+                <div class="button">
+                    <a href="#" ontouchstart="" data-toggle="modal" data-target="#myModal" class="btn-pink"
+                       data-wipe="{{ btn1 }}">{{ btn1 }}</a>
                 </div>
             </div>
         </div>
@@ -450,7 +443,14 @@
                 {% endfor %}
             </div>
         </div>
-
+        <div class="row wrap-btn align-items-center justify-content-center">
+            <div class="col-12 col-xl-4">
+                <div class="button">
+                    <a href="#" ontouchstart="" data-toggle="modal" data-target="#myModal" class="btn-pink"
+                       data-wipe="{{ btn1 }}">{{ btn1 }}</a>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
