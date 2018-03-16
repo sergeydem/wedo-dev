@@ -1,46 +1,46 @@
 var allOptions = {
     'main': {
         'light': {
-            'price':2000,
-            'time' :1
-        },
-        'medium': {
-            'price':3000,
+            'price':2655,
             'time' :2
         },
-        'premium': {
-            'price':5000,
+        'medium': {
+            'price':3855,
             'time' :3
+        },
+        'premium': {
+            'price':5920,
+            'time' :4
         }
     },
     'options': {
         'mycheck1': {
-            'price':100,
-            'time' :1
+            'price':700,
+            'time' :0
         },
         'mycheck2': {
             'price':200,
-            'time' :1
+            'time' :0
         },
         'mycheck3': {
-            'price':300,
-            'time' :1
+            'price':200,
+            'time' :0
         },
         'mycheck4': {
-            'price':400,
-            'time' :1
+            'price':200,
+            'time' :0
         },
         'mycheck5': {
-            'price':500,
-            'time' :1
+            'price':300,
+            'time' :0
         },
         'mycheck6': {
-            'price':600,
-            'time' :1
+            'price':500,
+            'time' :0
         },
         'mycheck7': {
-            'price':700,
-            'time' :1
+            'price':360,
+            'time' :0
         }
     }
 };

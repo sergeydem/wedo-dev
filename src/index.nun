@@ -366,11 +366,11 @@
                     <div class="cost">
                         <div class="price">
                             <p>{{ title_total_cost }}</p>
-                            <div class="total-price" id="totalPrice">$2000</div>
+                            <div class="total-price" id="totalPrice">$2655</div>
                         </div>
                         <div class="time">
                             <p>{{ title_total_time }}</p>
-                            <div class="total-time" id="totalTime">1 месяц</div>
+                            <div class="total-time" id="totalTime">2 месяца</div>
                         </div>
                     </div>
                 </div>
