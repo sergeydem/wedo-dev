@@ -37,11 +37,13 @@ $( document ).ready(function() {
         responsive:{ //Адаптация в зависимости от разрешения экрана
             0:{
                 items:1,
-                dots: true
+                dots: true,
+                nav: false
             },
             600:{
                 items:1,
-                dots: true
+                dots: true,
+                nav: false
             },
             1000:{
                 items:1
