@@ -1048,6 +1048,7 @@ footer {
       }
       .footer-phone {
         display: flex;
+        justify-content: center;
         a {
           margin: 15px 0;
           color: $white;
@@ -1055,9 +1056,7 @@ footer {
           text-decoration: none;
           font-size: 14px;
         }
-        @include media-breakpoint-down(sm){
-          display: none;
-        }
+
       }
     }
   }

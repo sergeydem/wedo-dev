@@ -15,7 +15,7 @@
     </script>
     <!-- End Google Tag Manager -->
 
-    <title>Разработка интернет-магазинов от 2000$, компания WeDo</title>
+    <title>Разработка интернет-магазинов от 2655$, компания WeDo</title>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -63,7 +63,6 @@
             <div class="col-6 col-md-7 item">
                 <div class="phone">
                     <a href="{{ phone1_href }}">{{ phone1 }}</a>
-                    <a href="{{ phone2_href }}">{{ phone2 }}</a>
                 </div>
             </div>
         </div>
@@ -493,8 +492,6 @@
                     <a href=""><img src="img/logo.png" alt="WeDo"></a>
                     <div class="footer-phone">
                         <a href="{{ phone1_href }}">{{ phone1 }}</a>
-                        <a href="{{ phone2_href }}">{{ phone2 }}</a>
-                        <a href="{{ phone3_href }}">{{ phone3 }}</a>
                     </div>
                     <p>{{сopyright}}</p>
                 </div>
