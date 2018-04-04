@@ -28,7 +28,7 @@ $( document ).ready(function() {
     $('.slider-work').owlCarousel({
         loop:true, //Зацикливаем слайдер
         margin:50, //Отступ от картино если выводите больше 1
-        autoplay:false, //Автозапуск слайдера
+        autoplay:true, //Автозапуск слайдера
         smartSpeed:2000, //Время движения слайда
         autoplayTimeout:7000, //Время смены слайда
         dots: false,
