@@ -343,6 +343,9 @@ section {
     @include media-breakpoint-down(sm){
       padding-top: 25px;
     }
+    a {
+      text-decoration: none;
+    }
     .item {
       min-height: 300px;
       width: 100%;
@@ -380,14 +383,12 @@ section {
             }
           }
           .wrap-link {
-            a {
-              text-decoration: none;
-              border-bottom: 0;
+            p {
               color: $white;
               transition: 1s;
+              font-size: 20px;
               &:hover {
-
-                border-bottom: 1px solid $white;
+                color: $blueLight;
               }
             }
         }
@@ -617,6 +618,13 @@ section {
       padding: 60px 0;
       .price {
         margin-bottom: 30px;
+      }
+      .footnote {
+        p {
+          margin: 0;
+          font-size: 14px;
+          padding: 25px 25px 0 25px;
+        }
       }
       .total-price, .total-time {
         font-family: $OpenSansRegular;
