@@ -15,7 +15,7 @@
     </script>
     <!-- End Google Tag Manager -->
 
-    <title>Разработка интернет-магазинов от 2655$, компания WeDo</title>
+    <title>Разработка интернет-магазинов от 2150$, компания WeDo</title>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -406,7 +406,7 @@
                     <div class="cost">
                         <div class="price">
                             <p>{{ title_total_cost }}</p>
-                            <div class="total-price" id="totalPrice">$2655</div>
+                            <div class="total-price" id="totalPrice">$2150</div>
                         </div>
                         <div class="time">
                             <p>{{ title_total_time }}</p>

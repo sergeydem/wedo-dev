@@ -1,7 +1,7 @@
 var allOptions = {
     'main': {
         'light': {
-            'price':2655,
+            'price':2150,
             'time' :2
         },
         'medium': {
