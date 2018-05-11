@@ -916,40 +916,45 @@ section {
       @include media-breakpoint-down(md){
         margin-top: 25px;
       }
-      .card {
-        border: 1px solid $blue;
-        border-radius: 0;
-        margin-top: 80px;
-        transition: all 0.5s ease;
-        max-width: 275px;
-        min-height: 331px;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        margin-bottom: 5px;
-        &:hover {
-          cursor: pointer;
-          margin-top: 70px;
-          @include media-breakpoint-down(md) {
+      .link-to-other-page {
+        text-decoration: none;
+        color: inherit;
+        .card {
+          border: 1px solid $blue;
+          border-radius: 0;
+          margin-top: 80px;
+          transition: all 0.5s ease;
+          max-width: 275px;
+          min-height: 331px;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          margin-bottom: 5px;
+          &:hover {
+            cursor: pointer;
+            margin-top: 70px;
+            @include media-breakpoint-down(md) {
+              margin-top: 0;
+            }
+          }
+          @include media-breakpoint-down(md){
             margin-top: 0;
           }
-        }
-        @include media-breakpoint-down(md){
-          margin-top: 0;
-        }
-        .title-card {
-          font-size: 60px;
-          color: $blue;
-          text-align: center;
-          p {
-            margin: 0;
+          .title-card {
+            font-size: 60px;
+            color: $blue;
+            text-align: center;
+            p {
+              margin: 0;
+            }
+          }
+          .description-card {
+            text-align: center;
+            font-size: 18px;
           }
         }
-        .description-card {
-          text-align: center;
-          font-size: 18px;
-        }
       }
+
     }
   }
   .wrap-btn {

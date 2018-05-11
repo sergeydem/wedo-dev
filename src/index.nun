@@ -473,14 +473,16 @@
                 {% for item in card %}
                     <div class="item">
                         <div class="card-wrap">
-                            <div class="card">
-                                <div class="title-card">
-                                    <p>{{ item.title_card }}</p>
+                            <a href="{{ item.link }}" class="link-to-other-page" target="_blank">
+                                <div class="card">
+                                    <div class="title-card">
+                                        <p>{{ item.title_card }}</p>
+                                    </div>
+                                    <div class="description-card">
+                                        <p>{{ item.descr_card }}</p>
+                                    </div>
                                 </div>
-                                <div class="description-card">
-                                    <p>{{ item.descr_card }}</p>
-                                </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 {% endfor %}
